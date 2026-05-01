@@ -4,10 +4,10 @@ The project needs a structured way to create, render, complete, and evaluate wri
 
 ## What Changes
 
-- Add a structured exam package format for individual written exams, including `manifest.json`, `exam.json`, private `solution.json`, assets, and validation output.
+- Add a structured public exam package format for individual written exams, including `manifest.json`, `exam.json`, assets, and validation output, plus a separate private solution package for grading.
 - Add a gallery-oriented app model that lists available exams with ID, status, percentage result, point result, and action button state.
 - Add an exam-taking flow that renders PB4, PB2, and PB3 sequentially, stores answers separately from exam content, enforces block-level task exclusion limits, and supports file uploads for sketch/drawing tasks.
-- Add a grading workflow that uses `exam.json`, `solution.json`, and `attempt.json` to produce a separate `result.json`.
+- Add a grading workflow that uses public `exam.json`, private `solution.json`, and `attempt.json` to produce a separate `result.json`.
 - Add guardrails so generated exams follow the researched IHK/ZFA-like structure while using original, legally safe content rather than copied protected tasks or assets.
 
 ## Capabilities
@@ -26,7 +26,7 @@ The project needs a structured way to create, render, complete, and evaluate wri
 
 ## Impact
 
-- New data schemas and templates for exam packages, attempts, solutions, and results.
+- New data schemas and templates for public exam packages, private solution packages, attempts, and results.
 - New app surfaces for exam gallery, paper-by-paper exam taking, submission confirmation, and result display.
 - New Codex skills/workflows for creating legally safe exam packages, validating package structure, and grading submitted attempts.
 - New validation rules based on the researched written exam structure: PB4, PB2, PB3; PB2/PB3 with U1-U8 general tasks, U9-U12 Printmedien tasks, 7+3 task selection, 10 points per task, and no PB1 in the written exam flow.

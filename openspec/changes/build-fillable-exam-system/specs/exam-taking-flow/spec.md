@@ -52,6 +52,19 @@ The system SHALL store candidate answers separately from the exam definition usi
 - **THEN** the attempt stores the answer value keyed by that field ID
 - **AND** the exam definition is not modified
 
+### Requirement: Supported answer field types are renderable
+The system SHALL render supported answer field types from `exam.json`, including single-choice, multiple-choice, short-text, long-text, list, table, calculation, file-upload, and drawing-upload fields.
+
+#### Scenario: Bound PB4 task is rendered
+- **WHEN** a PB4 task defines a single-choice or multiple-choice answer field
+- **THEN** the app renders selectable options
+- **AND** the selected option IDs are stored in the attempt data
+
+#### Scenario: Open task is rendered
+- **WHEN** a task defines a short-text, long-text, list, table, or calculation answer field
+- **THEN** the app renders the matching fillable input
+- **AND** the saved value is stored by answer field ID
+
 ### Requirement: File uploads are supported for sketch tasks
 The system SHALL allow answer fields of type `fileUpload` or `drawingUpload` to store candidate-uploaded files as attempt attachments.
 

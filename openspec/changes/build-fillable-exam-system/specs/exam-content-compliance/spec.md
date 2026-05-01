@@ -31,13 +31,38 @@ The system SHALL include content-policy metadata in each generated exam package 
 - **THEN** the manifest records `sourceType` as `original-generated`
 - **AND** the manifest records that it is not derived from protected original exam material
 
-### Requirement: Compliance validation flags risk
-The validation workflow SHALL flag exam packages that appear to contain copied original exam material, missing asset rights metadata, or solution content in public exam data.
+### Requirement: Task and asset provenance is machine-checkable
+The system SHALL record provenance metadata for generated tasks, generated assets, and user-provided materials.
+
+#### Scenario: Generated task is stored
+- **WHEN** a generated task is written to `exam.json`
+- **THEN** the task records provenance as `original-generated`
+- **AND** the task records that it was generated from public structure and topic guidance, not protected original exam content
+
+#### Scenario: User-provided material is stored
+- **WHEN** a user-provided material is included
+- **THEN** the material records provenance as `user-provided`
+- **AND** the material records rights status and whether manual rights review is required
+
+### Requirement: Compliance validation is operational and conservative
+The validation workflow SHALL use explicit provenance metadata, forbidden source flags, public-data checks, and optional similarity checks to flag compliance risk without claiming to prove legal originality.
 
 #### Scenario: Missing rights metadata
 - **WHEN** an asset lacks required rights metadata
 - **THEN** validation marks the package as non-compliant or requiring license review
 
+#### Scenario: Forbidden protected-source provenance
+- **WHEN** a task or asset records that it was copied from, extracted from, or closely paraphrased from protected original exam material
+- **THEN** validation fails the package
+
 #### Scenario: Public exam contains rubric content
 - **WHEN** `exam.json` contains rubric or model-answer fields
 - **THEN** validation fails the package
+
+#### Scenario: Similarity check is configured
+- **WHEN** a configured similarity check flags task text as too close to protected source material
+- **THEN** validation marks the package as requiring manual rights review
+
+#### Scenario: Provenance is uncertain
+- **WHEN** validation cannot determine whether a material has sufficient rights metadata
+- **THEN** validation marks the package as `requiresManualRightsReview`

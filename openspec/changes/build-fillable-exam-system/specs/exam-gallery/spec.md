@@ -12,11 +12,11 @@ The system SHALL provide a main gallery that lists all available exam packages u
 - **THEN** the card shows status `in-progress` and a `Fortsetzen` action
 
 ### Requirement: Gallery cards show grading summary
-The system SHALL show percentage and point totals on gallery cards when a result exists for an exam attempt.
+The system SHALL show the weighted written percentage and point totals on gallery cards when a result exists for an exam attempt.
 
 #### Scenario: Graded result exists
 - **WHEN** the gallery loads an exam with a graded result
-- **THEN** the card shows the percentage score
+- **THEN** the card shows the weighted written percentage score
 - **AND** the card shows awarded points and possible points in `.../...` format
 
 ### Requirement: Gallery actions reflect exam state
@@ -31,9 +31,13 @@ The system SHALL derive the primary gallery card action from the latest attempt 
 - **THEN** the card shows an `Ergebnis anzeigen` action
 
 ### Requirement: Gallery does not expose private solutions
-The gallery SHALL NOT load or expose `solution.json`.
+The gallery SHALL NOT load, bundle, link, route, or expose private `solution.json`.
 
 #### Scenario: Gallery renders cards
 - **WHEN** the gallery renders available exams
 - **THEN** it reads manifest, attempt, and result metadata only
 - **AND** it does not request or display private solution content
+
+#### Scenario: Public exam packages are served
+- **WHEN** exam package assets are available to the gallery
+- **THEN** private solution files are not present in those public routes or client bundles

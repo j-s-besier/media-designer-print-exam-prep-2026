@@ -5,7 +5,7 @@ The grading workflow SHALL evaluate a submitted attempt using the public exam de
 
 #### Scenario: Submitted attempt is graded
 - **WHEN** the grading workflow runs
-- **THEN** it loads `exam.json`, `solution.json`, and the submitted attempt
+- **THEN** it loads public `exam.json`, private `solution.json`, and the submitted attempt
 - **AND** it writes a separate result output
 
 ### Requirement: Excluded tasks are not graded
@@ -39,14 +39,34 @@ The grading workflow SHALL score each evaluated subtask against its rubric and a
 - **WHEN** all evaluated subtasks in a paper are scored
 - **THEN** the result records awarded points, possible points, and percentage for that paper
 
+### Requirement: Written score weighting is explicit
+The grading workflow SHALL calculate and store raw paper results separately from weighted written results using the configured paper weights.
+
+#### Scenario: Weighted written result is calculated
+- **WHEN** PB4, PB2, and PB3 have been scored
+- **THEN** the result records raw points awarded and raw points possible for each paper
+- **AND** the result records raw written points awarded and raw written points possible
+- **AND** the result records weighted written percentage using PB4 weight 10, PB2 weight 20, and PB3 weight 20
+
+#### Scenario: Full exam contribution excludes PB1
+- **WHEN** the result is calculated for the written exam flow
+- **THEN** the result records that PB1 is not included
+- **AND** the result records the written contribution toward the full exam as a maximum of 50 percentage points
+
+#### Scenario: Weighted calculation differs from raw average
+- **WHEN** PB4 is 80 percent, PB2 is 70 percent, and PB3 is 90 percent
+- **THEN** the weighted written percentage is 80 percent
+- **AND** the full-exam written contribution is 40 percentage points
+
 ### Requirement: Overall result is calculated from graded papers
-The grading workflow SHALL calculate total awarded points, total possible points, and overall percentage from the graded written papers.
+The grading workflow SHALL calculate total raw points, weighted written percentage, written contribution toward the full exam, and display-ready point totals from the graded written papers.
 
 #### Scenario: Grading completes
 - **WHEN** PB4, PB2, and PB3 have been scored
-- **THEN** the result records total awarded points
-- **AND** the result records total possible points
-- **AND** the result records the overall percentage
+- **THEN** the result records total raw points awarded
+- **AND** the result records total raw points possible
+- **AND** the result records weighted written percentage
+- **AND** the result records the written contribution excluding PB1
 
 ### Requirement: Grading does not mutate source data
 The grading workflow SHALL NOT modify `exam.json`, `solution.json`, or the submitted attempt when producing `result.json`.
