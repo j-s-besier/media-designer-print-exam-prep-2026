@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "manifest.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "type",
+    "profession",
+    "specialization",
+    "status",
+    "examVersion",
+    "contentPolicy"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string" },
+    "type": { "type": "string", "enum": ["written-exam"] },
+    "profession": { "type": "string" },
+    "specialization": { "type": "string" },
+    "status": { "type": "string", "enum": ["available", "draft", "archived"] },
+    "examVersion": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "examDate": { "type": "string" },
+    "summary": { "type": "string" },
+    "contentPolicy": {
+      "type": "object",
+      "required": ["sourceType", "copyrightSafe", "notDerivedFromProtectedExam"],
+      "additionalProperties": false,
+      "properties": {
+        "sourceType": {
+          "type": "string",
+          "enum": ["original-generated", "user-provided", "mixed"]
+        },
+        "copyrightSafe": { "type": "boolean" },
+        "notDerivedFromProtectedExam": { "type": "boolean" },
+        "requiresManualRightsReview": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

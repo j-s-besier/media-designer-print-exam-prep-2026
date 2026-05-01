@@ -1,0 +1,3356 @@
+{
+  "schemaVersion": "1.0",
+  "examId": "mediengestalter-printmedien-sommer-2026",
+  "visibility": "private",
+  "gradingMode": "criteria-keyword-assisted",
+  "rubrics": [
+    {
+      "subtaskId": "PB4-W1-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W2-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W3-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W4-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W5-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W6-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W7-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W8-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W9-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W10-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W11-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W12-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W13-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W14-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W15-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W16-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W17-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W18-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die zutreffende Antwortoption wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W19-a",
+      "maxPoints": 12,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Rechte und Pflichten, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "rechte und pflichten",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W20-a",
+      "maxPoints": 12,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Kuendigungsschutz, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "kuendigungsschutz",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W21-a",
+      "maxPoints": 12,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Wirtschaftskreislauf, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "wirtschaftskreislauf",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W22-a",
+      "maxPoints": 12,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Nachhaltigkeit, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "nachhaltigkeit",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W23-a",
+      "maxPoints": 12,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Steuern und Abgaben, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "steuern und abgaben",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W24-a",
+      "maxPoints": 12,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Betriebliche Organisation, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "betriebliche organisation",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U1-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Corporate Design Beratung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "corporate design beratung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U1-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Corporate Design Beratung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "corporate design beratung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U2-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Zielgruppenanalyse, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "zielgruppenanalyse",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U2-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Zielgruppenanalyse, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "zielgruppenanalyse",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U3-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Logo-Entwurf, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "logo entwurf",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U3-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Logo-Entwurf, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "logo entwurf",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U4-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Webseiten-Gestaltung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "webseiten gestaltung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U4-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Webseiten-Gestaltung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "webseiten gestaltung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U5-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Flyer-Gestaltung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "flyer gestaltung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U5-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Flyer-Gestaltung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "flyer gestaltung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U6-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Schutzrechte, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "schutzrechte",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U6-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Schutzrechte, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "schutzrechte",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U7-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Korrekturen durchfuehren, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "korrekturen durchfuehren",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U7-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Korrekturen durchfuehren, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "korrekturen durchfuehren",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U8-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Protokolle, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "protokolle",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U8-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Protokolle, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "protokolle",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U9-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Gestaltungsraster, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsraster",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U9-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Gestaltungsraster, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsraster",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U10-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Gestaltungsgrundsaetze anwenden, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsgrundsaetze anwenden",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U10-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Gestaltungsgrundsaetze anwenden, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsgrundsaetze anwenden",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U11-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Visuelle Zeichen, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "visuelle zeichen",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U11-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Visuelle Zeichen, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "visuelle zeichen",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U12-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Gestaltung beurteilen, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "gestaltung beurteilen",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U12-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Gestaltung beurteilen, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "gestaltung beurteilen",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U1-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Feedback, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "feedback",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U1-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Feedback, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "feedback",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U2-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu HTML/CSS-Syntax, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "html css syntax",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U2-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu HTML/CSS-Syntax, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "html css syntax",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U3-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Druckverfahren, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "druckverfahren",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U3-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Druckverfahren, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "druckverfahren",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U4-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu KI, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "ki",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U4-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu KI, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "ki",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U5-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Bildbeurteilung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "bildbeurteilung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U5-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Bildbeurteilung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "bildbeurteilung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U6-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Medienneutrale Daten, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "medienneutrale daten",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U6-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Medienneutrale Daten, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "medienneutrale daten",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U7-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Englischsprachige Informationsquellen, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "englischsprachige informationsquellen",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U7-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Englischsprachige Informationsquellen, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "englischsprachige informationsquellen",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U8-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Arbeitsdokumentation, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "arbeitsdokumentation",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U8-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Arbeitsdokumentation, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "arbeitsdokumentation",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U9-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Produktionsdaten aufbereiten, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "produktionsdaten aufbereiten",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U9-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Produktionsdaten aufbereiten, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "produktionsdaten aufbereiten",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U10-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Druckbogen-Berechnung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "druckbogen berechnung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U10-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Druckbogen-Berechnung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "druckbogen berechnung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U11-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Farbmanagement, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "farbmanagement",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U11-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Farbmanagement, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "farbmanagement",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U12-a",
+      "maxPoints": 4,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Automatisierung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "automatisierung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U12-b",
+      "maxPoints": 6,
+      "modelAnswer": "Eine vollstaendige Antwort nennt passende Aspekte zu Automatisierung, wendet sie auf die Situation an und begruendet die Entscheidung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Begruendung"
+      ],
+      "gradingNotes": "Keine Original-IHK-Loesung. Kriterien dienen einer transparenten Uebungsbewertung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe und Kriterien sind korrekt genannt.",
+          "keywords": [
+            "automatisierung",
+            "zielgruppe",
+            "begruendung",
+            "workflow",
+            "recht",
+            "druck",
+            "farbe",
+            "layout",
+            "daten",
+            "qualitaet"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort wird auf die berufliche Situation angewendet.",
+          "keywords": [
+            "kunde",
+            "betrieb",
+            "produkt",
+            "situation",
+            "daten",
+            "entwurf",
+            "produktion"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruendung",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    }
+  ]
+}

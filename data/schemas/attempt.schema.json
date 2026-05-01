@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "attempt.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "id", "examId", "status", "startedAt", "paperSubmissions"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "id": { "type": "string" },
+    "examId": { "type": "string" },
+    "userId": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["in-progress", "submitted", "graded"]
+    },
+    "currentPaperId": { "type": ["string", "null"] },
+    "startedAt": { "type": "string" },
+    "submittedAt": { "type": ["string", "null"] },
+    "paperSubmissions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["paperId", "status", "blockSelections", "answers"],
+        "additionalProperties": false,
+        "properties": {
+          "paperId": { "type": "string" },
+          "status": { "type": "string", "enum": ["not-started", "in-progress", "submitted"] },
+          "startedAt": { "type": ["string", "null"] },
+          "submittedAt": { "type": ["string", "null"] },
+          "blockSelections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["blockId", "excludedTaskIds"],
+              "additionalProperties": false,
+              "properties": {
+                "blockId": { "type": "string" },
+                "excludedTaskIds": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["fieldId", "type", "value"],
+              "additionalProperties": false,
+              "properties": {
+                "fieldId": { "type": "string" },
+                "type": { "type": "string" },
+                "value": {},
+                "files": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["id", "name", "path", "mimeType"],
+                    "additionalProperties": false,
+                    "properties": {
+                      "id": { "type": "string" },
+                      "name": { "type": "string" },
+                      "path": { "type": "string" },
+                      "mimeType": { "type": "string" },
+                      "size": { "type": "number" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

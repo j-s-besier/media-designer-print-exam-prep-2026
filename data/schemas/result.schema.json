@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "result.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "attemptId",
+    "examId",
+    "status",
+    "gradedAt",
+    "pb1Included",
+    "rawWrittenPointsAwarded",
+    "rawWrittenPointsPossible",
+    "weightedWrittenPercentage",
+    "fullExamWrittenContribution",
+    "papers"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "id": { "type": "string" },
+    "attemptId": { "type": "string" },
+    "examId": { "type": "string" },
+    "status": { "type": "string", "enum": ["graded", "requires-manual-review"] },
+    "gradedAt": { "type": "string" },
+    "pb1Included": { "type": "boolean" },
+    "rawWrittenPointsAwarded": { "type": "number" },
+    "rawWrittenPointsPossible": { "type": "number" },
+    "weightedWrittenPercentage": { "type": "number" },
+    "fullExamWrittenContribution": { "type": "number" },
+    "needsManualReview": { "type": "boolean" },
+    "papers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "paperId",
+          "pointsAwarded",
+          "pointsPossible",
+          "rawPercentage",
+          "weightPercent",
+          "tasks"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "paperId": { "type": "string" },
+          "pointsAwarded": { "type": "number" },
+          "pointsPossible": { "type": "number" },
+          "rawPercentage": { "type": "number" },
+          "weightPercent": { "type": "number" },
+          "weightedContribution": { "type": "number" },
+          "tasks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["taskId", "status", "pointsAwarded", "pointsPossible", "subtasks"],
+              "additionalProperties": false,
+              "properties": {
+                "taskId": { "type": "string" },
+                "status": { "type": "string", "enum": ["graded", "excluded"] },
+                "pointsAwarded": { "type": "number" },
+                "pointsPossible": { "type": "number" },
+                "subtasks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "subtaskId",
+                      "pointsAwarded",
+                      "maxPoints",
+                      "feedback",
+                      "confidence",
+                      "needsManualReview"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "subtaskId": { "type": "string" },
+                      "pointsAwarded": { "type": "number" },
+                      "maxPoints": { "type": "number" },
+                      "feedback": { "type": "string" },
+                      "confidence": { "type": "number" },
+                      "needsManualReview": { "type": "boolean" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "validationNotes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

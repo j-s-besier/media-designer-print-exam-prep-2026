@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "solution.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "examId", "visibility", "rubrics"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "examId": { "type": "string" },
+    "visibility": { "type": "string", "enum": ["private"] },
+    "gradingMode": { "type": "string" },
+    "rubrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["subtaskId", "maxPoints", "criteria"],
+        "additionalProperties": false,
+        "properties": {
+          "subtaskId": { "type": "string" },
+          "maxPoints": { "type": "number" },
+          "modelAnswer": { "type": "string" },
+          "alternativeCorrectAnswers": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "gradingNotes": { "type": "string" },
+          "criteria": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "points", "description"],
+              "additionalProperties": false,
+              "properties": {
+                "id": { "type": "string" },
+                "points": { "type": "number" },
+                "description": { "type": "string" },
+                "keywords": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "manualReviewIfMissing": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "id": "mediengestalter-printmedien-<season>",
+  "title": "Abschlusspruefung Uebung <season> - Printmedien",
+  "profession": "mediengestalter-digital-print",
+  "specialization": "printmedien",
+  "ordinance": "2023-05-15",
+  "language": "de-DE",
+  "papers": [
+    {
+      "id": "PB4",
+      "title": "Wirtschafts- und Sozialkunde",
+      "durationMinutes": 60,
+      "weightPercent": 10,
+      "order": 1,
+      "instructions": [],
+      "blocks": []
+    },
+    {
+      "id": "PB2",
+      "title": "Medien konzipieren, gestalten und praesentieren",
+      "durationMinutes": 120,
+      "weightPercent": 20,
+      "order": 2,
+      "instructions": [],
+      "blocks": []
+    },
+    {
+      "id": "PB3",
+      "title": "Medien produzieren",
+      "durationMinutes": 120,
+      "weightPercent": 20,
+      "order": 3,
+      "instructions": [],
+      "blocks": []
+    }
+  ]
+}
