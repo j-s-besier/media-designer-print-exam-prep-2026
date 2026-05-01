@@ -136,6 +136,7 @@ dd {
 }
 
 .primary-button,
+.danger-button,
 .secondary-button,
 .ghost-button,
 .upload-button {
@@ -152,6 +153,11 @@ dd {
 
 .primary-button {
   background: #1d5b4f;
+  color: #fff;
+}
+
+.danger-button {
+  background: #8a2f24;
   color: #fff;
 }
 

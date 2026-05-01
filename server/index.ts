@@ -4,7 +4,9 @@ import type { Attempt, PaperId } from "../src/lib/examTypes";
 import { nextPaperId, sortPapers, validatePaperSubmission } from "../src/lib/examLogic";
 import { gradeAttempt } from "./grading";
 import {
+  AttemptDeletionError,
   createAttempt,
+  deleteInProgressAttempt,
   latestAttemptForExam,
   latestResultForExam,
   listExamIds,
@@ -97,6 +99,19 @@ app.put("/api/attempts/:attemptId", async (req, res, next) => {
     await saveAttempt(attempt);
     res.json({ attempt });
   } catch (error) {
+    next(error);
+  }
+});
+
+app.delete("/api/attempts/:attemptId", async (req, res, next) => {
+  try {
+    await deleteInProgressAttempt(req.params.attemptId);
+    res.status(204).send();
+  } catch (error) {
+    if (error instanceof AttemptDeletionError) {
+      res.status(error.statusCode).json({ error: error.message });
+      return;
+    }
     next(error);
   }
 });

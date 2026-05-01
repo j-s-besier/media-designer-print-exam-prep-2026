@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { AlertCircle, Check, ClipboardCheck, Copy, FilePenLine, Loader2, Upload } from "lucide-react";
+import { AlertCircle, Check, ClipboardCheck, Copy, FilePenLine, Loader2, LogOut, Upload } from "lucide-react";
 import { createRoot } from "react-dom/client";
 import type {
   Answer,
@@ -85,10 +85,7 @@ function App() {
 
       const response = await fetch(`/api/exams/${card.examId}`);
       const data = (await response.json()) as ExamPayload;
-      const attempt =
-        card.action === "Pruefen" || !data.latestAttempt
-          ? await createAttempt(card.examId)
-          : data.latestAttempt;
+      const attempt = await createAttempt(card.examId);
       setView({ name: "exam", exam: data.exam, manifest: data.manifest, attempt });
     } catch (error) {
       showNotice(error instanceof Error ? error.message : "Aktion fehlgeschlagen.", "error");
@@ -123,7 +120,7 @@ function App() {
           <p className="eyebrow">Mediengestalter Digital und Print</p>
           <h1>Pruefungstrainer Printmedien</h1>
         </div>
-        {view.name !== "gallery" ? (
+        {view.name === "result" ? (
           <button className="ghost-button" onClick={() => void returnToGallery()}>
             Zurueck
           </button>
@@ -157,6 +154,7 @@ function App() {
           onFinished={() =>
             void returnToGallery("Pruefung abgegeben. Der Auswertungsprompt kann jetzt in der Galerie kopiert werden.")
           }
+          onQuit={() => void returnToGallery("Pruefungsversuch geloescht.")}
           onError={(message) => showNotice(message, "error")}
         />
       ) : null}
@@ -218,6 +216,7 @@ function ExamRunner({
   attempt,
   setAttempt,
   onFinished,
+  onQuit,
   onError
 }: {
   exam: Exam;
@@ -225,6 +224,7 @@ function ExamRunner({
   attempt: Attempt;
   setAttempt: (attempt: Attempt) => void;
   onFinished: () => void;
+  onQuit: () => void;
   onError: (message: string) => void;
 }) {
   const paper = exam.papers.find((item) => item.id === attempt.currentPaperId) ?? exam.papers[0];
@@ -292,6 +292,25 @@ function ExamRunner({
     if (!data.nextPaperId) {
       onFinished();
     }
+  }
+
+  async function quitAttempt() {
+    const confirmed = window.confirm(
+      "Pruefung wirklich beenden? Der aktuelle Versuch wird geloescht. Deine Antworten koennen nicht fortgesetzt werden."
+    );
+    if (!confirmed) {
+      return;
+    }
+
+    setMessages([]);
+    const response = await fetch(`/api/attempts/${attempt.id}`, { method: "DELETE" });
+    if (!response.ok) {
+      const data = (await response.json().catch(() => ({}))) as { error?: string };
+      onError(data.error ?? "Pruefungsversuch konnte nicht geloescht werden.");
+      return;
+    }
+
+    onQuit();
   }
 
   return (
@@ -426,6 +445,10 @@ function ExamRunner({
             <span>Streichregeln fuer diesen Pruefungsteil sind erfuellt.</span>
           </div>
         )}
+        <button className="danger-button" disabled={readOnly} onClick={() => void quitAttempt()}>
+          <LogOut size={18} />
+          Pruefung beenden
+        </button>
         <button className="ghost-button" onClick={() => void save()}>
           Speichern
         </button>
@@ -679,7 +702,6 @@ async function copyTextToClipboard(text: string): Promise<void> {
 function statusLabel(status: GalleryCardModel["status"]) {
   const labels: Record<GalleryCardModel["status"], string> = {
     "not-started": "nicht gestartet",
-    "in-progress": "in Bearbeitung",
     submitted: "abgegeben",
     "grading-ready": "bereit zur Auswertung",
     graded: "bewertet"

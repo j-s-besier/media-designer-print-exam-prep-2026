@@ -143,11 +143,11 @@ export function deriveGalleryCard(
   return {
     examId: manifest.id,
     title: manifest.title,
-    status: "in-progress",
-    action: "Fortsetzen",
+    status: "not-started",
+    action: "Pruefen",
     weightedWrittenPercentage: null,
     pointsLabel: null,
-    attemptId: latestAttempt.id
+    attemptId: null
   };
 }
 

@@ -1,4 +1,5 @@
 import fs from "node:fs/promises";
+import path from "node:path";
 import { describe, expect, it, afterAll } from "vitest";
 import type { Answer, Attempt, Exam, PaperSubmission } from "../src/lib/examTypes";
 import {
@@ -12,16 +13,22 @@ import {
 import { attemptDir, resultPath } from "../server/paths";
 import { examPackageDir, solutionDir } from "../server/paths";
 import { gradeAttempt } from "../server/grading";
-import { loadExam, loadManifest, saveAttempt } from "../server/storage";
-import { writeJson } from "../server/jsonStore";
+import { deleteInProgressAttempt, loadExam, loadManifest, saveAttempt, saveUpload } from "../server/storage";
+import { pathExists, writeJson } from "../server/jsonStore";
 import { validateExamPackage } from "../server/validation";
 
 const examId = "mediengestalter-printmedien-sommer-2026";
 const testAttemptId = "attempt-test-e2e";
+const deleteAttemptId = "attempt-test-delete";
+const submittedDeleteAttemptId = "attempt-test-delete-submitted";
+const gradedDeleteAttemptId = "attempt-test-delete-graded";
 const invalidExamId = "invalid-public-solution";
 
 afterAll(async () => {
   await fs.rm(attemptDir(testAttemptId), { recursive: true, force: true });
+  await fs.rm(attemptDir(deleteAttemptId), { recursive: true, force: true });
+  await fs.rm(attemptDir(submittedDeleteAttemptId), { recursive: true, force: true });
+  await fs.rm(attemptDir(gradedDeleteAttemptId), { recursive: true, force: true });
   await fs.rm(resultPath(testAttemptId), { force: true });
   await fs.rm(examPackageDir(invalidExamId), { recursive: true, force: true });
   await fs.rm(solutionDir(invalidExamId), { recursive: true, force: true });
@@ -99,8 +106,9 @@ describe("selection and gallery logic", () => {
 
     const attempt = createEmptyAttempt(await loadExam(examId));
     const inProgress = deriveGalleryCard(manifest, attempt, null);
-    expect(inProgress.status).toBe("in-progress");
-    expect(inProgress.action).toBe("Fortsetzen");
+    expect(inProgress.status).toBe("not-started");
+    expect(inProgress.action).toBe("Pruefen");
+    expect(inProgress.attemptId).toBeNull();
 
     attempt.status = "submitted";
     attempt.currentPaperId = null;
@@ -115,6 +123,48 @@ describe("selection and gallery logic", () => {
     expect(prompt).toContain("$grade-ihk-printmedien-exam");
     expect(prompt).toContain(`data/attempts/${testAttemptId}/attempt.json`);
     expect(prompt).toContain("nicht als 1:1-Musterloesungsvergleich");
+  });
+});
+
+describe("attempt deletion", () => {
+  it("deletes in-progress attempts with uploads", async () => {
+    const exam = await loadExam(examId);
+    const attempt = createEmptyAttempt(exam, "2026-05-01T11:00:00.000Z");
+    attempt.id = deleteAttemptId;
+    await saveAttempt(attempt);
+    const upload = await saveUpload({
+      attemptId: deleteAttemptId,
+      fieldId: "test-upload",
+      name: "skizze.txt",
+      mimeType: "text/plain",
+      dataBase64: Buffer.from("testdatei", "utf8").toString("base64")
+    });
+    const uploadPath = path.join(attemptDir(deleteAttemptId), upload.path);
+
+    expect(await pathExists(path.join(attemptDir(deleteAttemptId), "attempt.json"))).toBe(true);
+    expect(await pathExists(uploadPath)).toBe(true);
+
+    await deleteInProgressAttempt(deleteAttemptId);
+
+    expect(await pathExists(path.join(attemptDir(deleteAttemptId), "attempt.json"))).toBe(false);
+    expect(await pathExists(uploadPath)).toBe(false);
+  });
+
+  it("rejects deletion of submitted and graded attempts", async () => {
+    const exam = await loadExam(examId);
+    const submittedAttempt = createSubmittedAttempt(exam);
+    submittedAttempt.id = submittedDeleteAttemptId;
+    await saveAttempt(submittedAttempt);
+
+    const gradedAttempt = createSubmittedAttempt(exam);
+    gradedAttempt.id = gradedDeleteAttemptId;
+    gradedAttempt.status = "graded";
+    await saveAttempt(gradedAttempt);
+
+    await expect(deleteInProgressAttempt(submittedDeleteAttemptId)).rejects.toMatchObject({ statusCode: 409 });
+    await expect(deleteInProgressAttempt(gradedDeleteAttemptId)).rejects.toMatchObject({ statusCode: 409 });
+    expect(await pathExists(path.join(attemptDir(submittedDeleteAttemptId), "attempt.json"))).toBe(true);
+    expect(await pathExists(path.join(attemptDir(gradedDeleteAttemptId), "attempt.json"))).toBe(true);
   });
 });
 
