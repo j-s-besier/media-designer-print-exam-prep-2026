@@ -1,0 +1,4208 @@
+{
+  "schemaVersion": "1.0",
+  "examId": "mediengestalter-printmedien-uebungspruefung-02",
+  "visibility": "private",
+  "gradingMode": "criteria-keyword-assisted",
+  "rubrics": [
+    {
+      "subtaskId": "PB4-W1-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W2-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W3-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W4-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W5-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W6-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W7-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W8-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W9-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W10-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W11-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W12-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W13-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W14-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W15-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W16-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W17-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W18-a",
+      "maxPoints": 2.6666666666666665,
+      "modelAnswer": "Option a ist fachlich passend.",
+      "gradingNotes": "Uebungsrubric, keine offizielle IHK-Loesung.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.6666666666666665,
+          "description": "Die fachlich passende Option wurde gewaehlt.",
+          "keywords": [
+            "a"
+          ]
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W19-a",
+      "maxPoints": 12,
+      "modelAnswer": "Bewertungshorizont zu Rechte und Pflichten in der Ausbildung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "rechte und pflichten in der ausbildung",
+            "wiso",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W20-a",
+      "maxPoints": 12,
+      "modelAnswer": "Bewertungshorizont zu Kuendigungsschutz: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "kuendigungsschutz",
+            "wiso",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W21-a",
+      "maxPoints": 12,
+      "modelAnswer": "Bewertungshorizont zu Sozialversicherung und Abgaben: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "sozialversicherung und abgaben",
+            "wiso",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W22-a",
+      "maxPoints": 12,
+      "modelAnswer": "Bewertungshorizont zu Nachhaltigkeit im Betrieb: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "nachhaltigkeit im betrieb",
+            "wiso",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W23-a",
+      "maxPoints": 12,
+      "modelAnswer": "Bewertungshorizont zu Markt und Preisbildung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "markt und preisbildung",
+            "wiso",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB4-W24-a",
+      "maxPoints": 12,
+      "modelAnswer": "Bewertungshorizont zu Betriebliche Mitbestimmung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 4.8,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "betriebliche mitbestimmung",
+            "wiso",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 4.2,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 3,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U1-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Corporate Design Beratung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "corporate design beratung",
+            "corporate design",
+            "beratung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U1-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Corporate Design Beratung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "corporate design beratung",
+            "corporate design",
+            "beratung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U2-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Zielgruppenanalyse: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "zielgruppenanalyse",
+            "zielgruppe",
+            "analyse",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U2-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Zielgruppenanalyse: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "zielgruppenanalyse",
+            "zielgruppe",
+            "analyse",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U3-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Logo-Entwurf: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "logo-entwurf",
+            "logo",
+            "marke",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U3-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Logo-Entwurf: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "logo-entwurf",
+            "logo",
+            "marke",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U4-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Webseiten-Gestaltung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "webseiten-gestaltung",
+            "web",
+            "gestaltung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U4-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Webseiten-Gestaltung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "webseiten-gestaltung",
+            "web",
+            "gestaltung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U5-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Flyer-Gestaltung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "flyer-gestaltung",
+            "flyer",
+            "layout",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U5-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Flyer-Gestaltung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "flyer-gestaltung",
+            "flyer",
+            "layout",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U6-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Schutzrechte: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "schutzrechte",
+            "recht",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U6-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Schutzrechte: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "schutzrechte",
+            "recht",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U7-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Korrekturen durchfuehren: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "korrekturen durchfuehren",
+            "korrektur",
+            "abstimmung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U7-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Korrekturen durchfuehren: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "korrekturen durchfuehren",
+            "korrektur",
+            "abstimmung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U8-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Protokolle: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "protokolle",
+            "protokoll",
+            "kommunikation",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U8-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Protokolle: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "protokolle",
+            "protokoll",
+            "kommunikation",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U9-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Gestaltungsraster: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsraster",
+            "printmedien",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U9-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Gestaltungsraster: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsraster",
+            "printmedien",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U10-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Gestaltungsgrundsaetze anwenden: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsgrundsaetze anwenden",
+            "printmedien",
+            "gestaltungsgrundsaetze",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U10-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Gestaltungsgrundsaetze anwenden: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "gestaltungsgrundsaetze anwenden",
+            "printmedien",
+            "gestaltungsgrundsaetze",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U11-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Visuelle Zeichen: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "visuelle zeichen",
+            "printmedien",
+            "zeichen",
+            "piktogramm",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U11-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Visuelle Zeichen: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "visuelle zeichen",
+            "printmedien",
+            "zeichen",
+            "piktogramm",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U12-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Gestaltung beurteilen: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "gestaltung beurteilen",
+            "printmedien",
+            "gestaltung",
+            "beurteilung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB2-U12-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Gestaltung beurteilen: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "gestaltung beurteilen",
+            "printmedien",
+            "gestaltung",
+            "beurteilung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U1-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Feedback: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "feedback",
+            "workflow",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U1-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Feedback: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "feedback",
+            "workflow",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U2-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu HTML/CSS-Syntax: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "html/css-syntax",
+            "html",
+            "css",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U2-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu HTML/CSS-Syntax: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "html/css-syntax",
+            "html",
+            "css",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U3-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Druckverfahren: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "druckverfahren",
+            "produktion",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U3-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Druckverfahren: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "druckverfahren",
+            "produktion",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U4-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu KI: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "ki",
+            "produktion",
+            "recht",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U4-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu KI: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "ki",
+            "produktion",
+            "recht",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U5-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Bildbeurteilung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "bildbeurteilung",
+            "bilddaten",
+            "qualitaet",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U5-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Bildbeurteilung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "bildbeurteilung",
+            "bilddaten",
+            "qualitaet",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U6-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Medienneutrale Daten: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "medienneutrale daten",
+            "daten",
+            "medienneutral",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U6-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Medienneutrale Daten: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "medienneutrale daten",
+            "daten",
+            "medienneutral",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U7-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Englischsprachige Informationsquellen: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "englischsprachige informationsquellen",
+            "englisch",
+            "dokumentation",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U7-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Englischsprachige Informationsquellen: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "englischsprachige informationsquellen",
+            "englisch",
+            "dokumentation",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U8-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Arbeitsdokumentation: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "arbeitsdokumentation",
+            "dokumentation",
+            "workflow",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U8-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Arbeitsdokumentation: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "arbeitsdokumentation",
+            "dokumentation",
+            "workflow",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U9-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Produktionsdaten aufbereiten: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "produktionsdaten aufbereiten",
+            "printmedien",
+            "produktionsdaten",
+            "preflight",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U9-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Produktionsdaten aufbereiten: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "produktionsdaten aufbereiten",
+            "printmedien",
+            "produktionsdaten",
+            "preflight",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U10-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Druckbogen-Berechnung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "druckbogen-berechnung",
+            "printmedien",
+            "druckbogen",
+            "berechnung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U10-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Druckbogen-Berechnung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "druckbogen-berechnung",
+            "printmedien",
+            "druckbogen",
+            "berechnung",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U11-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Farbmanagement: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "farbmanagement",
+            "printmedien",
+            "icc",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U11-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Farbmanagement: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "farbmanagement",
+            "printmedien",
+            "icc",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "preflight",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U12-a",
+      "maxPoints": 4,
+      "modelAnswer": "Bewertungshorizont zu Automatisierung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 1.6,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "automatisierung",
+            "printmedien",
+            "preflight",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 1.4,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    },
+    {
+      "subtaskId": "PB3-U12-b",
+      "maxPoints": 6,
+      "modelAnswer": "Bewertungshorizont zu Automatisierung: fachlich richtige, situationsbezogene Antwort mit nachvollziehbarer Begruendung.",
+      "alternativeCorrectAnswers": [
+        "sinngemaesse fachlich korrekte Loesung",
+        "abweichende, aber fachlich begruendete Entscheidung"
+      ],
+      "gradingNotes": "Nicht als 1:1-Musterloesungsvergleich verwenden; Kriterien, Fachsinn und Situationsbezug bewerten.",
+      "criteria": [
+        {
+          "id": "c1",
+          "points": 2.4,
+          "description": "Fachbegriffe, Kriterien oder Rechenschritte sind korrekt genannt.",
+          "keywords": [
+            "automatisierung",
+            "printmedien",
+            "preflight",
+            "zielgruppe",
+            "kunde",
+            "betrieb",
+            "produkt",
+            "produktion",
+            "workflow",
+            "layout",
+            "farbe",
+            "typografie",
+            "daten",
+            "qualitaet",
+            "druck",
+            "recht",
+            "beschnitt",
+            "profil",
+            "begruen",
+            "weil",
+            "dadurch"
+          ]
+        },
+        {
+          "id": "c2",
+          "points": 2.1,
+          "description": "Die Antwort bezieht sich auf Auftrag, Kunde, Zielgruppe, Daten oder Produktion.",
+          "keywords": [
+            "kunde",
+            "auftrag",
+            "zielgruppe",
+            "produkt",
+            "situation",
+            "daten",
+            "produktion",
+            "workflow",
+            "betrieb"
+          ]
+        },
+        {
+          "id": "c3",
+          "points": 1.5,
+          "description": "Die Entscheidung oder Massnahme wird nachvollziehbar begruendet.",
+          "keywords": [
+            "weil",
+            "dadurch",
+            "deshalb",
+            "begruen",
+            "wirkung",
+            "vermeiden",
+            "sicherstellen",
+            "reduzieren"
+          ],
+          "manualReviewIfMissing": true
+        }
+      ]
+    }
+  ]
+}
