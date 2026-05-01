@@ -135,6 +135,31 @@ dd {
   margin: 2px 0 0;
 }
 
+.status-badge {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 6px 9px;
+  white-space: nowrap;
+}
+
+.status-todo {
+  background: #e8f1ff;
+  color: #1859a8;
+}
+
+.status-failed {
+  background: #fdeaea;
+  color: #9c2424;
+}
+
+.status-passed {
+  background: #e7f6ec;
+  color: #17623a;
+}
+
 .primary-button,
 .danger-button,
 .secondary-button,

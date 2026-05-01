@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it, afterAll } from "vitest";
-import type { Answer, Attempt, Exam, PaperId, PaperSubmission } from "../src/lib/examTypes";
+import type { Answer, Attempt, Exam, PaperId, PaperSubmission, Result } from "../src/lib/examTypes";
 import {
   buildGradingPrompt,
   createEmptyAttempt,
@@ -106,21 +106,34 @@ describe("selection and gallery logic", () => {
   it("derives gallery card states from attempt and result", async () => {
     const manifest = await loadManifest(examId);
     const noAttempt = deriveGalleryCard(manifest, null, null);
-    expect(noAttempt.status).toBe("not-started");
+    expect(noAttempt.status).toBe("todo");
     expect(noAttempt.action).toBe("Pruefen");
+    expect(noAttempt.weightedWrittenPercentage).toBeNull();
+    expect(noAttempt.pointsLabel).toBeNull();
 
     const attempt = createEmptyAttempt(await loadExam(examId));
     const inProgress = deriveGalleryCard(manifest, attempt, null);
-    expect(inProgress.status).toBe("not-started");
+    expect(inProgress.status).toBe("todo");
     expect(inProgress.action).toBe("Pruefen");
     expect(inProgress.attemptId).toBeNull();
 
     attempt.status = "submitted";
     attempt.currentPaperId = null;
     const gradingReady = deriveGalleryCard(manifest, attempt, null);
-    expect(gradingReady.status).toBe("grading-ready");
+    expect(gradingReady.status).toBe("todo");
     expect(gradingReady.action).toBe("Prompt kopieren");
     expect(gradingReady.attemptId).toBe(attempt.id);
+
+    const failed = deriveGalleryCard(manifest, attempt, createResult(49));
+    expect(failed.status).toBe("failed");
+    expect(failed.action).toBe("Ergebnis anzeigen");
+    expect(failed.weightedWrittenPercentage).toBe(49);
+    expect(failed.pointsLabel).toBe("49/100");
+
+    const passed = deriveGalleryCard(manifest, attempt, createResult(50));
+    expect(passed.status).toBe("passed");
+    expect(passed.action).toBe("Ergebnis anzeigen");
+    expect(passed.weightedWrittenPercentage).toBe(50);
   });
 
   it("builds a Codex grading prompt for submitted attempts", () => {
@@ -277,6 +290,23 @@ function satisfyPaperSelection(exam: Exam, attempt: Attempt, paperId: PaperId) {
     const selection = submission.blockSelections.find((item) => item.blockId === block.id)!;
     selection.excludedTaskIds = block.tasks.slice(-requiredExclusions(block)).map((task) => task.id);
   }
+}
+
+function createResult(weightedWrittenPercentage: number): Result {
+  return {
+    schemaVersion: "1.0",
+    id: `result-${testAttemptId}-${weightedWrittenPercentage}`,
+    attemptId: testAttemptId,
+    examId,
+    status: "graded",
+    gradedAt: "2026-05-01T14:00:00.000Z",
+    pb1Included: false,
+    rawWrittenPointsAwarded: weightedWrittenPercentage,
+    rawWrittenPointsPossible: 100,
+    weightedWrittenPercentage,
+    fullExamWrittenContribution: weightedWrittenPercentage / 2,
+    papers: []
+  };
 }
 
 function answersForSubmission(paper: Exam["papers"][number], submission: PaperSubmission): Answer[] {

@@ -103,10 +103,11 @@ export function deriveGalleryCard(
   latestResult: Result | null
 ): GalleryCardModel {
   if (latestResult) {
+    const passed = latestResult.weightedWrittenPercentage >= 50;
     return {
       examId: manifest.id,
       title: manifest.title,
-      status: "graded",
+      status: passed ? "passed" : "failed",
       action: "Ergebnis anzeigen",
       weightedWrittenPercentage: latestResult.weightedWrittenPercentage,
       pointsLabel: `${formatNumber(latestResult.rawWrittenPointsAwarded)}/${formatNumber(
@@ -120,7 +121,7 @@ export function deriveGalleryCard(
     return {
       examId: manifest.id,
       title: manifest.title,
-      status: "not-started",
+      status: "todo",
       action: "Pruefen",
       weightedWrittenPercentage: null,
       pointsLabel: null,
@@ -132,7 +133,7 @@ export function deriveGalleryCard(
     return {
       examId: manifest.id,
       title: manifest.title,
-      status: "grading-ready",
+      status: "todo",
       action: "Prompt kopieren",
       weightedWrittenPercentage: null,
       pointsLabel: null,
@@ -143,7 +144,7 @@ export function deriveGalleryCard(
   return {
     examId: manifest.id,
     title: manifest.title,
-    status: "not-started",
+    status: "todo",
     action: "Pruefen",
     weightedWrittenPercentage: null,
     pointsLabel: null,

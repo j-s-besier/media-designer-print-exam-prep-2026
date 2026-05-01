@@ -236,11 +236,7 @@ export type SubtaskResult = {
   needsManualReview: boolean;
 };
 
-export type GalleryStatus =
-  | "not-started"
-  | "submitted"
-  | "grading-ready"
-  | "graded";
+export type GalleryStatus = "todo" | "failed" | "passed";
 
 export type GalleryCardModel = {
   examId: string;

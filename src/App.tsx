@@ -188,15 +188,17 @@ function Gallery({
             <dl className="meta-grid">
               <div>
                 <dt>Status</dt>
-                <dd>{statusLabel(card.status)}</dd>
+                <dd>
+                  <span className={`status-badge ${statusClassName(card.status)}`}>{statusLabel(card.status)}</span>
+                </dd>
               </div>
               <div>
                 <dt>Bewertung</dt>
-                <dd>{card.weightedWrittenPercentage === null ? "offen" : `${card.weightedWrittenPercentage}%`}</dd>
+                <dd>{card.weightedWrittenPercentage === null ? "-" : `${card.weightedWrittenPercentage}%`}</dd>
               </div>
               <div>
                 <dt>Punkte</dt>
-                <dd>{card.pointsLabel ?? "-/-"}</dd>
+                <dd>{card.pointsLabel ?? "-"}</dd>
               </div>
             </dl>
             <button className="primary-button" onClick={() => void onOpen(card)}>
@@ -680,12 +682,15 @@ async function copyTextToClipboard(text: string): Promise<void> {
 
 function statusLabel(status: GalleryCardModel["status"]) {
   const labels: Record<GalleryCardModel["status"], string> = {
-    "not-started": "nicht gestartet",
-    submitted: "abgegeben",
-    "grading-ready": "bereit zur Auswertung",
-    graded: "bewertet"
+    todo: "ToDo",
+    failed: "Nicht bestanden",
+    passed: "Bestanden"
   };
   return labels[status];
+}
+
+function statusClassName(status: GalleryCardModel["status"]) {
+  return `status-${status}`;
 }
 
 createRoot(document.getElementById("root")!).render(<App />);
