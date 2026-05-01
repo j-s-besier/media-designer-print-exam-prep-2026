@@ -1,0 +1,24 @@
+schema: spec-driven
+
+context: |
+  Domain: Vorbereitung auf die schriftliche Abschlusspruefung Sommer 2026
+  fuer Mediengestalter Digital und Print, Fachrichtung Printmedien, nach
+  der neuen Verordnung vom 15. Mai 2023.
+
+  Projektkontext und Recherche liegen unter:
+  - openspec/research/research.md
+  - openspec/research/themen_printmedien_ap_sommer_2026.md
+
+  Die schriftliche Pruefung besteht aus PB4 WiSo, PB2 Medien konzipieren,
+  gestalten und praesentieren sowie PB3 Medien produzieren. PB1 ist Praxis
+  und wird separat durch IHK/Pruefungsausschuss organisiert.
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
