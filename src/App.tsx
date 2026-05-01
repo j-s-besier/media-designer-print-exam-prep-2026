@@ -216,12 +216,18 @@ function ExamRunner({
   const [saving, setSaving] = useState(false);
   const [messages, setMessages] = useState<string[]>([]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMessages([]);
+  }, [paper.id]);
+
   if (!submission) {
     return <p>Kein Attempt fuer diesen Pruefungsteil gefunden.</p>;
   }
 
   const currentSubmission = submission;
   const readOnly = submission.status === "submitted";
+  const selectionValidation = validatePaperSubmission(paper, currentSubmission);
 
   function updateAttempt(next: Attempt) {
     setAttempt(next);
@@ -393,10 +399,21 @@ function ExamRunner({
       })}
 
       <div className="sticky-actions">
+        {!selectionValidation.valid ? (
+          <div className="sticky-validation" role="status">
+            <AlertCircle size={18} />
+            <span>{selectionValidation.messages.join(" ")}</span>
+          </div>
+        ) : (
+          <div className="sticky-validation ok" role="status">
+            <Check size={18} />
+            <span>Streichregeln fuer diesen Pruefungsteil sind erfuellt.</span>
+          </div>
+        )}
         <button className="ghost-button" onClick={() => void save()}>
           Speichern
         </button>
-        <button className="primary-button" disabled={readOnly} onClick={() => void submitPaper()}>
+        <button className="primary-button" disabled={readOnly || !selectionValidation.valid} onClick={() => void submitPaper()}>
           <Check size={18} />
           Pruefungsteil abgeben
         </button>

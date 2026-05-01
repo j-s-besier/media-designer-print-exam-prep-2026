@@ -341,6 +341,25 @@ textarea {
   position: sticky;
 }
 
+.sticky-validation {
+  align-items: center;
+  background: #fff8e7;
+  border: 1px solid #dec880;
+  border-radius: 6px;
+  color: #5d4b27;
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 10px;
+}
+
+.sticky-validation.ok {
+  background: #edf7f4;
+  border-color: #9ec9bd;
+  color: #1d5b4f;
+}
+
 .error-list {
   align-items: flex-start;
   color: #773022;
