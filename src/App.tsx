@@ -177,7 +177,7 @@ function Gallery({
       {cards.map((card) => {
         const copied = card.action === "Prompt kopieren" && card.attemptId === copiedAttemptId;
         return (
-          <article className="exam-card" key={card.examId}>
+          <article className="surface surface-standard surface-stack exam-card" key={card.examId}>
             <div className="card-heading">
               <ClipboardCheck size={22} />
               <div>
@@ -300,7 +300,7 @@ function ExamRunner({
 
   return (
     <section className="exam-runner">
-      <div className="paper-header">
+      <div className="surface surface-standard surface-inline paper-header">
         <div>
           <p className="eyebrow">{manifest.title}</p>
           <h2>
@@ -313,7 +313,7 @@ function ExamRunner({
         </div>
       </div>
 
-      <div className="instruction-band">
+      <div className="surface surface-standard surface-stack-compact instruction-band">
         {paper.instructions.map((block, index) => (
           <Content key={index} block={block} />
         ))}
@@ -332,7 +332,7 @@ function ExamRunner({
         const excludedIds = selection?.excludedTaskIds ?? [];
         const required = requiredExclusions(block);
         return (
-          <section className="task-block" key={block.id}>
+          <section className="surface surface-standard surface-stack-compact task-block" key={block.id}>
             <div className="block-header">
               <div>
                 <h3>{block.title}</h3>
@@ -347,7 +347,7 @@ function ExamRunner({
             {block.tasks.map((task) => {
               const excluded = excludedIds.includes(task.id);
               return (
-                <article className={`task-card ${excluded ? "excluded" : ""}`} key={task.id}>
+                <article className={`surface surface-compact surface-stack-compact task-card ${excluded ? "excluded" : ""}`} key={task.id}>
                   <div className="task-title-row">
                     <div>
                       <h4>
@@ -620,7 +620,7 @@ function Content({ block }: { block: ContentBlock }) {
 function ResultView({ result }: { result: Result }) {
   return (
     <section className="result-view">
-      <div className="result-summary">
+      <div className="surface surface-standard surface-stack-compact result-summary">
         <h2>Auswertung</h2>
         <p>{result.examId}</p>
         <strong>{result.weightedWrittenPercentage}%</strong>
@@ -630,7 +630,7 @@ function ResultView({ result }: { result: Result }) {
       </div>
       <div className="paper-results">
         {result.papers.map((paper) => (
-          <article className="paper-result" key={paper.paperId}>
+          <article className="surface surface-compact surface-stack-compact paper-result" key={paper.paperId}>
             <h3>{paper.paperId}</h3>
             <p>
               {paper.pointsAwarded}/{paper.pointsPossible} Punkte, {paper.rawPercentage}%
