@@ -1,8 +1,8 @@
 import express from "express";
 import path from "node:path";
 import type { Attempt, PaperId } from "../src/lib/examTypes";
-import { nextPaperId, sortPapers, validatePaperSubmission } from "../src/lib/examLogic";
 import { gradeAttempt } from "./grading";
+import { AttemptSubmissionError, submitAttemptPaper } from "./attemptSubmission";
 import {
   AttemptDeletionError,
   createAttempt,
@@ -14,10 +14,9 @@ import {
   loadExam,
   loadManifest,
   loadResult,
-  saveAttempt,
   saveUpload
 } from "./storage";
-import { validateAttemptSchema, validateExamPackage } from "./validation";
+import { validateExamPackage } from "./validation";
 import { examPackageDir } from "./paths";
 
 const app = express();
@@ -84,25 +83,6 @@ app.get("/api/attempts/:attemptId", async (req, res, next) => {
   }
 });
 
-app.put("/api/attempts/:attemptId", async (req, res, next) => {
-  try {
-    const attempt = req.body.attempt as Attempt;
-    if (attempt.id !== req.params.attemptId) {
-      res.status(400).json({ error: "Attempt id mismatch." });
-      return;
-    }
-    const issues = await validateAttemptSchema(attempt);
-    if (issues.some((issue) => issue.severity === "error")) {
-      res.status(400).json({ error: "Invalid attempt.", issues });
-      return;
-    }
-    await saveAttempt(attempt);
-    res.json({ attempt });
-  } catch (error) {
-    next(error);
-  }
-});
-
 app.delete("/api/attempts/:attemptId", async (req, res, next) => {
   try {
     await deleteInProgressAttempt(req.params.attemptId);
@@ -133,44 +113,20 @@ app.post("/api/attempts/:attemptId/uploads", async (req, res, next) => {
 
 app.post("/api/attempts/:attemptId/papers/:paperId/submit", async (req, res, next) => {
   try {
-    const attempt = await loadAttempt(req.params.attemptId);
-    const exam = await loadExam(attempt.examId);
+    const attempt = req.body.attempt as Attempt | undefined;
+    if (!attempt || attempt.id !== req.params.attemptId) {
+      res.status(400).json({ error: "Attempt id mismatch." });
+      return;
+    }
+
     const paperId = req.params.paperId as PaperId;
-    const paper = exam.papers.find((item) => item.id === paperId);
-    const submission = attempt.paperSubmissions.find((item) => item.paperId === paperId);
-    if (!paper || !submission) {
-      res.status(404).json({ error: "Paper or submission not found." });
-      return;
-    }
-    if (submission.status === "submitted") {
-      res.status(409).json({ error: "Paper is already submitted." });
-      return;
-    }
-    const validation = validatePaperSubmission(paper, submission);
-    if (!validation.valid) {
-      res.status(400).json({ error: "Invalid paper selection.", messages: validation.messages });
-      return;
-    }
-
-    const now = new Date().toISOString();
-    submission.status = "submitted";
-    submission.submittedAt = now;
-    const next = nextPaperId(exam, paperId);
-    attempt.currentPaperId = next;
-    if (next) {
-      const nextSubmission = attempt.paperSubmissions.find((item) => item.paperId === next);
-      if (nextSubmission && nextSubmission.status === "not-started") {
-        nextSubmission.status = "in-progress";
-        nextSubmission.startedAt = now;
-      }
-    } else {
-      attempt.status = "submitted";
-      attempt.submittedAt = now;
-    }
-
-    await saveAttempt(attempt);
-    res.json({ attempt, nextPaperId: next });
+    const result = await submitAttemptPaper(attempt, paperId);
+    res.json(result);
   } catch (error) {
+    if (error instanceof AttemptSubmissionError) {
+      res.status(error.statusCode).json({ error: error.message, ...error.details });
+      return;
+    }
     next(error);
   }
 });

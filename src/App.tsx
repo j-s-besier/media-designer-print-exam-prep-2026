@@ -229,7 +229,6 @@ function ExamRunner({
 }) {
   const paper = exam.papers.find((item) => item.id === attempt.currentPaperId) ?? exam.papers[0];
   const submission = attempt.paperSubmissions.find((item) => item.paperId === paper.id);
-  const [saving, setSaving] = useState(false);
   const [messages, setMessages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -255,23 +254,6 @@ function ExamRunner({
     updateAttempt(draft);
   }
 
-  async function save(nextAttempt = attempt) {
-    setSaving(true);
-    try {
-      const response = await fetch(`/api/attempts/${nextAttempt.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ attempt: nextAttempt })
-      });
-      if (!response.ok) {
-        const data = (await response.json()) as { error?: string };
-        throw new Error(data.error ?? "Speichern fehlgeschlagen.");
-      }
-    } finally {
-      setSaving(false);
-    }
-  }
-
   async function submitPaper() {
     setMessages([]);
     const validation = validatePaperSubmission(paper, currentSubmission);
@@ -279,9 +261,10 @@ function ExamRunner({
       setMessages(validation.messages);
       return;
     }
-    await save(attempt);
     const response = await fetch(`/api/attempts/${attempt.id}/papers/${paper.id}/submit`, {
-      method: "POST"
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ attempt })
     });
     const data = (await response.json()) as { attempt?: Attempt; nextPaperId?: PaperId | null; error?: string; messages?: string[] };
     if (!response.ok || !data.attempt) {
@@ -325,7 +308,6 @@ function ExamRunner({
         <div className="paper-meta">
           <span>{paper.durationMinutes} min</span>
           <span>{paper.weightPercent}% Gewicht</span>
-          {saving ? <span>Speichert...</span> : null}
         </div>
       </div>
 
@@ -448,9 +430,6 @@ function ExamRunner({
         <button className="danger-button" disabled={readOnly} onClick={() => void quitAttempt()}>
           <LogOut size={18} />
           Pruefung beenden
-        </button>
-        <button className="ghost-button" onClick={() => void save()}>
-          Speichern
         </button>
         <button className="primary-button" disabled={readOnly || !selectionValidation.valid} onClick={() => void submitPaper()}>
           <Check size={18} />

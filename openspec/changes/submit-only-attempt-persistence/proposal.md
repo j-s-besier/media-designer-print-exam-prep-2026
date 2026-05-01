@@ -20,13 +20,12 @@ In-progress exam attempts are currently written to disk as soon as an exam start
 ### Modified Capabilities
 
 - `exam-taking-flow`: Remove manual save behavior and define submit-only persistence for active exam attempts.
-- `exam-package-model`: Clarify that in-progress answer data is session-local until paper submission and that durable attempt records are created by submission/completion, not by typing or browser lifecycle events.
+- `exam-package-model`: Clarify that in-progress answer data is session-local until final completion and that durable attempt records are not created by typing, intermediate paper submission, or browser lifecycle events.
 
 ## Impact
 
 - `src/App.tsx`: Remove the save button, remove manual save calls, and send the current in-memory attempt as part of paper submission.
 - `server/index.ts`: Replace the generic client-side attempt update route with final-completion persistence logic.
 - `server/storage.ts`: Support transient attempt creation and deletion of active attempt directories even before an attempt record exists.
-- `src/lib/examLogic.ts`: Provide a reusable way to create an unsaved attempt id from loaded exam data.
-- `tests/examSystem.test.ts`: Add coverage for transient start, submit-time persistence, and delete behavior without relying on manual saves.
+- `tests/examSystem.test.ts`: Add coverage for transient start, final-completion persistence, and delete behavior without relying on manual saves.
 - OpenSpec specs for `exam-taking-flow` and `exam-package-model`.

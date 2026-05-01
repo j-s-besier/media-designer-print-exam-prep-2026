@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it, afterAll } from "vitest";
-import type { Answer, Attempt, Exam, PaperSubmission } from "../src/lib/examTypes";
+import type { Answer, Attempt, Exam, PaperId, PaperSubmission } from "../src/lib/examTypes";
 import {
   buildGradingPrompt,
   createEmptyAttempt,
@@ -12,8 +12,9 @@ import {
 } from "../src/lib/examLogic";
 import { attemptDir, resultPath } from "../server/paths";
 import { examPackageDir, solutionDir } from "../server/paths";
+import { submitAttemptPaper } from "../server/attemptSubmission";
 import { gradeAttempt } from "../server/grading";
-import { deleteInProgressAttempt, loadExam, loadManifest, saveAttempt, saveUpload } from "../server/storage";
+import { createAttempt, deleteInProgressAttempt, loadExam, loadManifest, saveAttempt, saveUpload } from "../server/storage";
 import { pathExists, writeJson } from "../server/jsonStore";
 import { validateExamPackage } from "../server/validation";
 
@@ -22,6 +23,8 @@ const testAttemptId = "attempt-test-e2e";
 const deleteAttemptId = "attempt-test-delete";
 const submittedDeleteAttemptId = "attempt-test-delete-submitted";
 const gradedDeleteAttemptId = "attempt-test-delete-graded";
+const transientDeleteAttemptId = "attempt-test-delete-transient";
+const finalOnlyAttemptId = "attempt-test-final-only";
 const invalidExamId = "invalid-public-solution";
 
 afterAll(async () => {
@@ -29,6 +32,8 @@ afterAll(async () => {
   await fs.rm(attemptDir(deleteAttemptId), { recursive: true, force: true });
   await fs.rm(attemptDir(submittedDeleteAttemptId), { recursive: true, force: true });
   await fs.rm(attemptDir(gradedDeleteAttemptId), { recursive: true, force: true });
+  await fs.rm(attemptDir(transientDeleteAttemptId), { recursive: true, force: true });
+  await fs.rm(attemptDir(finalOnlyAttemptId), { recursive: true, force: true });
   await fs.rm(resultPath(testAttemptId), { force: true });
   await fs.rm(examPackageDir(invalidExamId), { recursive: true, force: true });
   await fs.rm(solutionDir(invalidExamId), { recursive: true, force: true });
@@ -166,6 +171,55 @@ describe("attempt deletion", () => {
     expect(await pathExists(path.join(attemptDir(submittedDeleteAttemptId), "attempt.json"))).toBe(true);
     expect(await pathExists(path.join(attemptDir(gradedDeleteAttemptId), "attempt.json"))).toBe(true);
   });
+
+  it("cleans transient attempt upload directories without requiring attempt.json", async () => {
+    const upload = await saveUpload({
+      attemptId: transientDeleteAttemptId,
+      fieldId: "test-upload",
+      name: "skizze.txt",
+      mimeType: "text/plain",
+      dataBase64: Buffer.from("testdatei", "utf8").toString("base64")
+    });
+    const uploadPath = path.join(attemptDir(transientDeleteAttemptId), upload.path);
+
+    expect(await pathExists(path.join(attemptDir(transientDeleteAttemptId), "attempt.json"))).toBe(false);
+    expect(await pathExists(uploadPath)).toBe(true);
+
+    await deleteInProgressAttempt(transientDeleteAttemptId);
+
+    expect(await pathExists(uploadPath)).toBe(false);
+  });
+});
+
+describe("attempt persistence", () => {
+  it("starts attempts without writing an attempt record", async () => {
+    const attempt = await createAttempt(examId);
+
+    expect(attempt.status).toBe("in-progress");
+    expect(await pathExists(path.join(attemptDir(attempt.id), "attempt.json"))).toBe(false);
+  });
+
+  it("writes the attempt only after the final paper is submitted", async () => {
+    const exam = await loadExam(examId);
+    const attempt = createEmptyAttempt(exam, "2026-05-01T09:00:00.000Z");
+    attempt.id = finalOnlyAttemptId;
+
+    satisfyPaperSelection(exam, attempt, "PB4");
+    let submission = await submitAttemptPaper(attempt, "PB4");
+    expect(submission.nextPaperId).toBe("PB2");
+    expect(await pathExists(path.join(attemptDir(finalOnlyAttemptId), "attempt.json"))).toBe(false);
+
+    satisfyPaperSelection(exam, submission.attempt, "PB2");
+    submission = await submitAttemptPaper(submission.attempt, "PB2");
+    expect(submission.nextPaperId).toBe("PB3");
+    expect(await pathExists(path.join(attemptDir(finalOnlyAttemptId), "attempt.json"))).toBe(false);
+
+    satisfyPaperSelection(exam, submission.attempt, "PB3");
+    submission = await submitAttemptPaper(submission.attempt, "PB3");
+    expect(submission.nextPaperId).toBeNull();
+    expect(submission.attempt.status).toBe("submitted");
+    expect(await pathExists(path.join(attemptDir(finalOnlyAttemptId), "attempt.json"))).toBe(true);
+  });
 });
 
 describe("grading", () => {
@@ -214,6 +268,15 @@ function createSubmittedAttempt(exam: Exam): Attempt {
   }
 
   return attempt;
+}
+
+function satisfyPaperSelection(exam: Exam, attempt: Attempt, paperId: PaperId) {
+  const paper = exam.papers.find((item) => item.id === paperId)!;
+  const submission = attempt.paperSubmissions.find((item) => item.paperId === paperId)!;
+  for (const block of paper.blocks) {
+    const selection = submission.blockSelections.find((item) => item.blockId === block.id)!;
+    selection.excludedTaskIds = block.tasks.slice(-requiredExclusions(block)).map((task) => task.id);
+  }
 }
 
 function answersForSubmission(paper: Exam["papers"][number], submission: PaperSubmission): Answer[] {

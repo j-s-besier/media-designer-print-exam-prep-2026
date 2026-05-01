@@ -29,9 +29,7 @@ export async function loadExam(examId: string): Promise<Exam> {
 
 export async function createAttempt(examId: string): Promise<Attempt> {
   const exam = await loadExam(examId);
-  const attempt = createEmptyAttempt(exam);
-  await saveAttempt(attempt);
-  return attempt;
+  return createEmptyAttempt(exam);
 }
 
 export async function saveAttempt(attempt: Attempt): Promise<void> {
@@ -46,7 +44,8 @@ export async function deleteInProgressAttempt(attemptId: string): Promise<void> 
   const targetDir = safeAttemptDir(attemptId);
   const filePath = path.join(targetDir, "attempt.json");
   if (!(await pathExists(filePath))) {
-    throw new AttemptDeletionError("Pruefungsversuch nicht gefunden.", 404);
+    await fs.rm(targetDir, { recursive: true, force: true });
+    return;
   }
 
   const attempt = await readJson<Attempt>(filePath);
