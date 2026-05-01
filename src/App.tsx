@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { AlertCircle, Check, ClipboardCheck, FilePenLine, Loader2, Upload } from "lucide-react";
+import { AlertCircle, Check, ClipboardCheck, Copy, FilePenLine, Loader2, Upload } from "lucide-react";
 import { createRoot } from "react-dom/client";
 import type {
   Answer,
@@ -14,7 +14,7 @@ import type {
   Result,
   UploadFile
 } from "./lib/examTypes";
-import { deriveGalleryCard, requiredExclusions, validatePaperSubmission } from "./lib/examLogic";
+import { buildGradingPrompt, deriveGalleryCard, requiredExclusions, validatePaperSubmission } from "./lib/examLogic";
 import "./styles.css";
 
 type ExamSummary = {
@@ -40,6 +40,8 @@ function App() {
   const [summaries, setSummaries] = useState<ExamSummary[]>([]);
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
+  const [noticeKind, setNoticeKind] = useState<"info" | "success" | "error">("info");
+  const [copiedAttemptId, setCopiedAttemptId] = useState<string | null>(null);
 
   async function loadGallery() {
     setLoading(true);
@@ -67,14 +69,10 @@ function App() {
   async function openExam(card: GalleryCardModel) {
     setLoading(true);
     try {
-      if (card.action === "Auswerten" && card.attemptId) {
-        const response = await fetch(`/api/attempts/${card.attemptId}/grade`, { method: "POST" });
-        const data = (await response.json()) as { result?: Result; error?: string };
-        if (!response.ok || !data.result) {
-          throw new Error(data.error ?? "Auswertung fehlgeschlagen.");
-        }
-        setView({ name: "result", result: data.result });
-        await loadGallery();
+      if (card.action === "Prompt kopieren" && card.attemptId) {
+        await copyTextToClipboard(buildGradingPrompt(card.examId, card.attemptId));
+        setCopiedAttemptId(card.attemptId);
+        showNotice("Auswertungsprompt kopiert. Fuege ihn in Codex ein, um den Grading-Skill auszufuehren.", "success");
         return;
       }
 
@@ -93,7 +91,7 @@ function App() {
           : data.latestAttempt;
       setView({ name: "exam", exam: data.exam, manifest: data.manifest, attempt });
     } catch (error) {
-      setNotice(error instanceof Error ? error.message : "Aktion fehlgeschlagen.");
+      showNotice(error instanceof Error ? error.message : "Aktion fehlgeschlagen.", "error");
     } finally {
       setLoading(false);
     }
@@ -108,9 +106,14 @@ function App() {
   async function returnToGallery(message?: string) {
     setView({ name: "gallery" });
     if (message) {
-      setNotice(message);
+      showNotice(message, "success");
     }
     await loadGallery();
+  }
+
+  function showNotice(message: string, kind: "info" | "success" | "error" = "info") {
+    setNoticeKind(kind);
+    setNotice(message);
   }
 
   return (
@@ -128,8 +131,8 @@ function App() {
       </header>
 
       {notice ? (
-        <div className="notice" role="status">
-          <AlertCircle size={18} />
+        <div className={`notice ${noticeKind}`} role="status">
+          {noticeKind === "success" ? <Check size={18} /> : <AlertCircle size={18} />}
           <span>{notice}</span>
           <button onClick={() => setNotice(null)}>Schliessen</button>
         </div>
@@ -142,7 +145,9 @@ function App() {
         </div>
       ) : null}
 
-      {view.name === "gallery" ? <Gallery cards={cards} onOpen={openExam} /> : null}
+      {view.name === "gallery" ? (
+        <Gallery cards={cards} copiedAttemptId={copiedAttemptId} onOpen={openExam} />
+      ) : null}
       {view.name === "exam" ? (
         <ExamRunner
           exam={view.exam}
@@ -150,9 +155,9 @@ function App() {
           attempt={view.attempt}
           setAttempt={(attempt) => setView({ ...view, attempt })}
           onFinished={() =>
-            void returnToGallery("Pruefung abgegeben. Sie kann jetzt ausgewertet werden.")
+            void returnToGallery("Pruefung abgegeben. Der Auswertungsprompt kann jetzt in der Galerie kopiert werden.")
           }
-          onError={setNotice}
+          onError={(message) => showNotice(message, "error")}
         />
       ) : null}
       {view.name === "result" ? <ResultView result={view.result} /> : null}
@@ -160,38 +165,49 @@ function App() {
   );
 }
 
-function Gallery({ cards, onOpen }: { cards: GalleryCardModel[]; onOpen: (card: GalleryCardModel) => void }) {
+function Gallery({
+  cards,
+  copiedAttemptId,
+  onOpen
+}: {
+  cards: GalleryCardModel[];
+  copiedAttemptId: string | null;
+  onOpen: (card: GalleryCardModel) => void;
+}) {
   return (
     <section className="gallery-grid">
-      {cards.map((card) => (
-        <article className="exam-card" key={card.examId}>
-          <div className="card-heading">
-            <ClipboardCheck size={22} />
-            <div>
-              <h2>{card.title}</h2>
-              <p>{card.examId}</p>
+      {cards.map((card) => {
+        const copied = card.action === "Prompt kopieren" && card.attemptId === copiedAttemptId;
+        return (
+          <article className="exam-card" key={card.examId}>
+            <div className="card-heading">
+              <ClipboardCheck size={22} />
+              <div>
+                <h2>{card.title}</h2>
+                <p>{card.examId}</p>
+              </div>
             </div>
-          </div>
-          <dl className="meta-grid">
-            <div>
-              <dt>Status</dt>
-              <dd>{statusLabel(card.status)}</dd>
-            </div>
-            <div>
-              <dt>Bewertung</dt>
-              <dd>{card.weightedWrittenPercentage === null ? "offen" : `${card.weightedWrittenPercentage}%`}</dd>
-            </div>
-            <div>
-              <dt>Punkte</dt>
-              <dd>{card.pointsLabel ?? "-/-"}</dd>
-            </div>
-          </dl>
-          <button className="primary-button" onClick={() => void onOpen(card)}>
-            <FilePenLine size={18} />
-            {card.action}
-          </button>
-        </article>
-      ))}
+            <dl className="meta-grid">
+              <div>
+                <dt>Status</dt>
+                <dd>{statusLabel(card.status)}</dd>
+              </div>
+              <div>
+                <dt>Bewertung</dt>
+                <dd>{card.weightedWrittenPercentage === null ? "offen" : `${card.weightedWrittenPercentage}%`}</dd>
+              </div>
+              <div>
+                <dt>Punkte</dt>
+                <dd>{card.pointsLabel ?? "-/-"}</dd>
+              </div>
+            </dl>
+            <button className="primary-button" onClick={() => void onOpen(card)}>
+              {copied ? <Check size={18} /> : card.action === "Prompt kopieren" ? <Copy size={18} /> : <FilePenLine size={18} />}
+              {copied ? "Kopiert" : card.action}
+            </button>
+          </article>
+        );
+      })}
     </section>
   );
 }
@@ -641,6 +657,23 @@ async function uploadFile(attemptId: string, fieldId: string, file: File): Promi
     throw new Error(data.error ?? "Upload fehlgeschlagen.");
   }
   return data.file;
+}
+
+async function copyTextToClipboard(text: string): Promise<void> {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "true");
+  textarea.style.position = "fixed";
+  textarea.style.left = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
 }
 
 function statusLabel(status: GalleryCardModel["status"]) {

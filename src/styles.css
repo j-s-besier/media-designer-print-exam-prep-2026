@@ -201,6 +201,16 @@ textarea:disabled {
   border-color: #9ec9bd;
 }
 
+.notice.success {
+  background: #edf7f4;
+  border-color: #9ec9bd;
+  color: #1d5b4f;
+}
+
+.notice.error {
+  color: #773022;
+}
+
 .spin {
   animation: spin 1s linear infinite;
 }

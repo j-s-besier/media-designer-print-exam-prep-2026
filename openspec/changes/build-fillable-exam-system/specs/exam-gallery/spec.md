@@ -24,7 +24,13 @@ The system SHALL derive the primary gallery card action from the latest attempt 
 
 #### Scenario: Submitted attempt is ready for grading
 - **WHEN** an exam attempt has status `submitted` and no result
-- **THEN** the card shows an `Auswerten` action
+- **THEN** the card shows a `Prompt kopieren` action
+- **AND** activating the action copies a Codex prompt that references the grading skill and the saved attempt data
+
+#### Scenario: Grading prompt is copied
+- **WHEN** the user copies the grading prompt
+- **THEN** the app gives visible feedback that copying succeeded
+- **AND** the prompt instructs Codex to use the private grading workflow without exposing `solution.json` in the client
 
 #### Scenario: Result exists
 - **WHEN** an exam attempt has a result

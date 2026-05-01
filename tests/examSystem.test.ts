@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import { describe, expect, it, afterAll } from "vitest";
 import type { Answer, Attempt, Exam, PaperSubmission } from "../src/lib/examTypes";
 import {
+  buildGradingPrompt,
   createEmptyAttempt,
   deriveGalleryCard,
   requiredExclusions,
@@ -100,6 +101,20 @@ describe("selection and gallery logic", () => {
     const inProgress = deriveGalleryCard(manifest, attempt, null);
     expect(inProgress.status).toBe("in-progress");
     expect(inProgress.action).toBe("Fortsetzen");
+
+    attempt.status = "submitted";
+    attempt.currentPaperId = null;
+    const gradingReady = deriveGalleryCard(manifest, attempt, null);
+    expect(gradingReady.status).toBe("grading-ready");
+    expect(gradingReady.action).toBe("Prompt kopieren");
+    expect(gradingReady.attemptId).toBe(attempt.id);
+  });
+
+  it("builds a Codex grading prompt for submitted attempts", () => {
+    const prompt = buildGradingPrompt(examId, testAttemptId);
+    expect(prompt).toContain("$grade-ihk-printmedien-exam");
+    expect(prompt).toContain(`data/attempts/${testAttemptId}/attempt.json`);
+    expect(prompt).toContain("nicht als 1:1-Musterloesungsvergleich");
   });
 });
 

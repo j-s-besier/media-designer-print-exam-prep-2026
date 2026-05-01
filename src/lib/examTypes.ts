@@ -247,7 +247,7 @@ export type GalleryCardModel = {
   examId: string;
   title: string;
   status: GalleryStatus;
-  action: "Pruefen" | "Fortsetzen" | "Auswerten" | "Ergebnis anzeigen";
+  action: "Pruefen" | "Fortsetzen" | "Prompt kopieren" | "Ergebnis anzeigen";
   weightedWrittenPercentage: number | null;
   pointsLabel: string | null;
   attemptId: string | null;

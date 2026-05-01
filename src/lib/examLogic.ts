@@ -133,7 +133,7 @@ export function deriveGalleryCard(
       examId: manifest.id,
       title: manifest.title,
       status: "grading-ready",
-      action: "Auswerten",
+      action: "Prompt kopieren",
       weightedWrittenPercentage: null,
       pointsLabel: null,
       attemptId: latestAttempt.id
@@ -153,6 +153,27 @@ export function deriveGalleryCard(
 
 export function formatNumber(value: number): string {
   return Number.isInteger(value) ? String(value) : value.toFixed(1);
+}
+
+export function buildGradingPrompt(examId: string, attemptId: string): string {
+  return [
+    "$grade-ihk-printmedien-exam",
+    "",
+    "Werte diesen gespeicherten Pruefungsversuch aus.",
+    "",
+    `Exam-ID: ${examId}`,
+    `Attempt-ID: ${attemptId}`,
+    `Attempt-Datei: data/attempts/${attemptId}/attempt.json`,
+    `Public Exam: data/exams/${examId}/exam.json`,
+    `Private Solution: data/private/solutions/${examId}/solution.json`,
+    "",
+    "Bitte:",
+    `1. Nutze den Skill grade-ihk-printmedien-exam fuer Attempt ${attemptId}.`,
+    "2. Bewerte offene Antworten nach Rubric-Kriterien und fachlichem Sinn, nicht als 1:1-Musterloesungsvergleich.",
+    "3. Beachte gestrichene Aufgaben aus dem Attempt; diese duerfen nicht bewertet werden.",
+    "4. Markiere unsichere Bewertungen, Skizzen/Uploads und unklare Antworten als manuelle Pruefung.",
+    `5. Speichere das Ergebnis als data/results/${attemptId}.result.json und fasse Rohpunkte, gewichtete schriftliche Prozentzahl und manuelle Pruefpunkte zusammen.`
+  ].join("\n");
 }
 
 export function scoreWeightedWritten(papers: Array<{ rawPercentage: number; weightPercent: number }>) {

@@ -82,11 +82,13 @@ The desired workflow is:
 create-exam skill -> public exam package + private solution package
                   -> validate package
                   -> app attempt
-                  -> grade skill
+                  -> copied grading prompt
+                  -> grade skill in Codex
                   -> result
 ```
 
 Rationale: A creation skill can enforce domain-specific structure and legal guardrails, while JSON Schemas and validation reports make the output deterministic enough for an app to trust.
+The student-facing app stores the finished attempt and copies a prompt for Codex; it does not need to load private solution data or perform grading directly in the browser.
 
 ### Grade per subtask and rubric criterion
 
