@@ -1,11 +1,14 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import type { AnswerField, Exam, ExamPaper, Manifest, QuestionBlock, Rubric, Solution, Subtask, Task } from "../src/lib/examTypes";
-import { dataDir, examPackageDir, solutionDir } from "../server/paths";
+import { dataDir, examPackageDir, examsDir, solutionDir } from "../server/paths";
 import { writeJson } from "../server/jsonStore";
 import { validateExamPackage } from "../server/validation";
 
-const examId = "mediengestalter-printmedien-sommer-2026";
+type ExamIdentity = { id: string; title: string };
+
+const requestedExamId = process.argv[2];
+let examIdentity: ExamIdentity = { id: "mgdp-1", title: "MgDp-1" };
 const generatedBasis =
   "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.";
 
@@ -46,18 +49,19 @@ const pb3Print = [
 ] as const;
 
 async function main() {
+  examIdentity = requestedExamId ? identityFromId(requestedExamId) : await nextExamIdentity();
   const manifest = createManifest();
   const exam = createExam();
   const solution = createSolution(exam);
 
-  await fs.mkdir(path.join(examPackageDir(examId), "assets"), { recursive: true });
-  await writeJson(path.join(examPackageDir(examId), "manifest.json"), manifest);
-  await writeJson(path.join(examPackageDir(examId), "exam.json"), exam);
-  await writeJson(path.join(solutionDir(examId), "solution.json"), solution);
+  await fs.mkdir(path.join(examPackageDir(examIdentity.id), "assets"), { recursive: true });
+  await writeJson(path.join(examPackageDir(examIdentity.id), "manifest.json"), manifest);
+  await writeJson(path.join(examPackageDir(examIdentity.id), "exam.json"), exam);
+  await writeJson(path.join(solutionDir(examIdentity.id), "solution.json"), solution);
   await writeJson(path.join(dataDir, "templates", "written-exam-template.json"), createExamTemplate());
   await writeJson(path.join(dataDir, "templates", "solution-template.json"), createSolutionTemplate());
 
-  const report = await validateExamPackage(examId, true);
+  const report = await validateExamPackage(examIdentity.id, true);
   if (!report.valid) {
     console.error(JSON.stringify(report, null, 2));
     process.exitCode = 1;
@@ -67,8 +71,8 @@ async function main() {
 function createManifest(): Manifest {
   return {
     schemaVersion: "1.0",
-    id: examId,
-    title: "Mediengestalter Printmedien Sommer 2026",
+    id: examIdentity.id,
+    title: examIdentity.title,
     type: "written-exam",
     profession: "mediengestalter-digital-print",
     specialization: "printmedien",
@@ -91,8 +95,8 @@ function createManifest(): Manifest {
 function createExam(): Exam {
   return {
     schemaVersion: "1.0",
-    id: examId,
-    title: "Abschlusspruefung Uebung Sommer 2026 - Printmedien",
+    id: examIdentity.id,
+    title: examIdentity.title,
     profession: "mediengestalter-digital-print",
     specialization: "printmedien",
     ordinance: "2023-05-15",
@@ -537,8 +541,8 @@ function createRubric(taskTitle: string, subtask: Subtask): Rubric {
 function createExamTemplate() {
   return {
     schemaVersion: "1.0",
-    id: "mediengestalter-printmedien-<season>",
-    title: "Abschlusspruefung Uebung <season> - Printmedien",
+    id: "mgdp-<number>",
+    title: "MgDp-<number>",
     profession: "mediengestalter-digital-print",
     specialization: "printmedien",
     ordinance: "2023-05-15",
@@ -554,7 +558,7 @@ function createExamTemplate() {
 function createSolutionTemplate() {
   return {
     schemaVersion: "1.0",
-    examId: "mediengestalter-printmedien-<season>",
+    examId: "mgdp-<number>",
     visibility: "private",
     gradingMode: "criteria-keyword-assisted",
     rubrics: []
@@ -576,6 +580,25 @@ function slug(value: string) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+async function nextExamIdentity(): Promise<ExamIdentity> {
+  const entries = await fs.readdir(examsDir, { withFileTypes: true }).catch(() => []);
+  const highest = entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => /^mgdp-(\d+)$/.exec(entry.name)?.[1])
+    .filter((number): number is string => Boolean(number))
+    .map((number) => Number(number))
+    .reduce((max, number) => Math.max(max, number), 0);
+  return identityFromId(`mgdp-${highest + 1}`);
+}
+
+function identityFromId(id: string): ExamIdentity {
+  const match = /^mgdp-(\d+)$/.exec(id);
+  if (!match) {
+    throw new Error("Exam ID must use the numbered format mgdp-<number>.");
+  }
+  return { id, title: `MgDp-${match[1]}` };
 }
 
 main().catch((error) => {

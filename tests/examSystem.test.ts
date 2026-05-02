@@ -1,11 +1,12 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it, afterAll } from "vitest";
-import type { Answer, Attempt, Exam, PaperId, PaperSubmission, Result } from "../src/lib/examTypes";
+import type { Answer, Attempt, Exam, PaperId, PaperSubmission, Result, Solution } from "../src/lib/examTypes";
 import {
   buildGradingPrompt,
   createEmptyAttempt,
   deriveGalleryCard,
+  formatNumber,
   requiredExclusions,
   scoreWeightedWritten,
   validatePaperSubmission
@@ -15,10 +16,11 @@ import { examPackageDir, solutionDir } from "../server/paths";
 import { submitAttemptPaper } from "../server/attemptSubmission";
 import { gradeAttempt } from "../server/grading";
 import { createAttempt, deleteInProgressAttempt, loadExam, loadManifest, saveAttempt, saveUpload } from "../server/storage";
-import { pathExists, writeJson } from "../server/jsonStore";
+import { pathExists, readJson, writeJson } from "../server/jsonStore";
 import { validateExamPackage } from "../server/validation";
 
-const examId = "mediengestalter-printmedien-sommer-2026";
+const examId = "mgdp-1";
+const secondaryExamId = "mgdp-2";
 const testAttemptId = "attempt-test-e2e";
 const deleteAttemptId = "attempt-test-delete";
 const submittedDeleteAttemptId = "attempt-test-delete-submitted";
@@ -44,6 +46,21 @@ describe("exam package validation", () => {
     const report = await validateExamPackage(examId, true);
     expect(report.valid).toBe(true);
     expect(report.issues).toEqual([]);
+  });
+
+  it("uses numbered package ids and display titles", async () => {
+    const manifest = await loadManifest(examId);
+    const exam = await loadExam(examId);
+    const solution = await readJson<Solution>(path.join(solutionDir(examId), "solution.json"));
+    const secondaryManifest = await loadManifest(secondaryExamId);
+
+    expect(manifest.id).toBe("mgdp-1");
+    expect(manifest.title).toBe("MgDp-1");
+    expect(exam.id).toBe("mgdp-1");
+    expect(exam.title).toBe("MgDp-1");
+    expect(solution.examId).toBe("mgdp-1");
+    expect(secondaryManifest.id).toBe("mgdp-2");
+    expect(secondaryManifest.title).toBe("MgDp-2");
   });
 
   it("contains explicit PB4 blocks and PB2/PB3 selection blocks", async () => {
@@ -124,16 +141,26 @@ describe("selection and gallery logic", () => {
     expect(gradingReady.action).toBe("Prompt kopieren");
     expect(gradingReady.attemptId).toBe(attempt.id);
 
-    const failed = deriveGalleryCard(manifest, attempt, createResult(49));
+    const failed = deriveGalleryCard(manifest, attempt, createResult(49.25));
     expect(failed.status).toBe("failed");
     expect(failed.action).toBe("Ergebnis anzeigen");
-    expect(failed.weightedWrittenPercentage).toBe(49);
-    expect(failed.pointsLabel).toBe("49/100");
+    expect(failed.weightedWrittenPercentage).toBe(49.3);
+    expect(failed.pointsLabel).toBe("49.3/100.0");
 
     const passed = deriveGalleryCard(manifest, attempt, createResult(50));
     expect(passed.status).toBe("passed");
     expect(passed.action).toBe("Ergebnis anzeigen");
     expect(passed.weightedWrittenPercentage).toBe(50);
+  });
+
+  it("formats displayed point values with one decimal place", async () => {
+    const exam = await loadExam(examId);
+    const pb4 = exam.papers.find((paper) => paper.id === "PB4")!;
+    const fractionalTask = pb4.blocks.find((block) => block.id === "PB4-bound")!.tasks[0];
+
+    expect(fractionalTask.maxPoints).toBeCloseTo(40 / 15);
+    expect(formatNumber(fractionalTask.maxPoints)).toBe("2.7");
+    expect(formatNumber(10)).toBe("10.0");
   });
 
   it("builds a Codex grading prompt for submitted attempts", () => {
@@ -248,6 +275,14 @@ describe("grading", () => {
     expect(result.pb1Included).toBe(false);
     expect(result.fullExamWrittenContribution).toBeLessThanOrEqual(50);
     expect(result.papers.some((paper) => paper.tasks.some((task) => task.status === "excluded"))).toBe(true);
+
+    const pb4 = result.papers.find((paper) => paper.paperId === "PB4")!;
+    const fractionalTask = pb4.tasks.find((task) => task.taskId === "PB4-W1")!;
+    expect(pb4.pointsPossible).toBe(100);
+    expect(fractionalTask.pointsPossible).toBe(2.7);
+    expect(fractionalTask.subtasks[0].maxPoints).toBe(2.7);
+    expect(decimalPlaces(result.rawWrittenPointsPossible)).toBeLessThanOrEqual(1);
+    expect(decimalPlaces(result.weightedWrittenPercentage)).toBeLessThanOrEqual(1);
   });
 
   it("calculates weighted written score from paper weights", () => {
@@ -307,6 +342,11 @@ function createResult(weightedWrittenPercentage: number): Result {
     fullExamWrittenContribution: weightedWrittenPercentage / 2,
     papers: []
   };
+}
+
+function decimalPlaces(value: number): number {
+  const [, decimals = ""] = String(value).split(".");
+  return decimals.length;
 }
 
 function answersForSubmission(paper: Exam["papers"][number], submission: PaperSubmission): Answer[] {

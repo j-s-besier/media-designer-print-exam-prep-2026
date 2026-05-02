@@ -109,7 +109,7 @@ export function deriveGalleryCard(
       title: manifest.title,
       status: passed ? "passed" : "failed",
       action: "Ergebnis anzeigen",
-      weightedWrittenPercentage: latestResult.weightedWrittenPercentage,
+      weightedWrittenPercentage: round(latestResult.weightedWrittenPercentage),
       pointsLabel: `${formatNumber(latestResult.rawWrittenPointsAwarded)}/${formatNumber(
         latestResult.rawWrittenPointsPossible
       )}`,
@@ -153,7 +153,7 @@ export function deriveGalleryCard(
 }
 
 export function formatNumber(value: number): string {
-  return Number.isInteger(value) ? String(value) : value.toFixed(1);
+  return round(value).toFixed(1);
 }
 
 export function buildGradingPrompt(examId: string, attemptId: string): string {
@@ -191,5 +191,5 @@ export function scoreWeightedWritten(papers: Array<{ rawPercentage: number; weig
 }
 
 export function round(value: number): number {
-  return Math.round(value * 100) / 100;
+  return Math.round((value + Number.EPSILON) * 10) / 10;
 }

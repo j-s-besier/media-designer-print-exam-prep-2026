@@ -1,6 +1,6 @@
 import { validateExamPackage } from "../server/validation";
 
-const examId = process.argv[2] ?? "mediengestalter-printmedien-sommer-2026";
+const examId = process.argv[2] ?? "mgdp-1";
 
 const report = await validateExamPackage(examId, true);
 console.log(JSON.stringify(report, null, 2));

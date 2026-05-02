@@ -14,7 +14,7 @@ import type {
   Result,
   UploadFile
 } from "./lib/examTypes";
-import { buildGradingPrompt, deriveGalleryCard, requiredExclusions, validatePaperSubmission } from "./lib/examLogic";
+import { buildGradingPrompt, deriveGalleryCard, formatNumber, requiredExclusions, validatePaperSubmission } from "./lib/examLogic";
 import "./styles.css";
 
 type ExamSummary = {
@@ -194,7 +194,7 @@ function Gallery({
               </div>
               <div>
                 <dt>Bewertung</dt>
-                <dd>{card.weightedWrittenPercentage === null ? "-" : `${card.weightedWrittenPercentage}%`}</dd>
+                <dd>{card.weightedWrittenPercentage === null ? "-" : `${formatNumber(card.weightedWrittenPercentage)}%`}</dd>
               </div>
               <div>
                 <dt>Punkte</dt>
@@ -353,7 +353,7 @@ function ExamRunner({
                       <h4>
                         {task.number} {task.title}
                       </h4>
-                      <p>{task.maxPoints} Punkte</p>
+                      <p>{formatNumber(task.maxPoints)} Punkte</p>
                     </div>
                     {required > 0 ? (
                       <button
@@ -383,7 +383,7 @@ function ExamRunner({
                   {task.subtasks.map((subtask) => (
                     <div className="subtask" key={subtask.id}>
                       <strong>
-                        {subtask.label}) {subtask.maxPoints} P
+                        {subtask.label}) {formatNumber(subtask.maxPoints)} P
                       </strong>
                       {subtask.prompt.map((blockItem, index) => (
                         <Content key={index} block={blockItem} />
@@ -623,9 +623,9 @@ function ResultView({ result }: { result: Result }) {
       <div className="surface surface-standard surface-stack-compact result-summary">
         <h2>Auswertung</h2>
         <p>{result.examId}</p>
-        <strong>{result.weightedWrittenPercentage}%</strong>
+        <strong>{formatNumber(result.weightedWrittenPercentage)}%</strong>
         <span>
-          {result.rawWrittenPointsAwarded}/{result.rawWrittenPointsPossible} Rohpunkte
+          {formatNumber(result.rawWrittenPointsAwarded)}/{formatNumber(result.rawWrittenPointsPossible)} Rohpunkte
         </span>
       </div>
       <div className="paper-results">
@@ -633,7 +633,7 @@ function ResultView({ result }: { result: Result }) {
           <article className="surface surface-compact surface-stack-compact paper-result" key={paper.paperId}>
             <h3>{paper.paperId}</h3>
             <p>
-              {paper.pointsAwarded}/{paper.pointsPossible} Punkte, {paper.rawPercentage}%
+              {formatNumber(paper.pointsAwarded)}/{formatNumber(paper.pointsPossible)} Punkte, {formatNumber(paper.rawPercentage)}%
             </p>
           </article>
         ))}
