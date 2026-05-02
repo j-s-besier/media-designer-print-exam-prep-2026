@@ -29,9 +29,10 @@ The system SHALL use a small set of named spacing values for card padding, compa
 - **WHEN** a compact-density card-like surface renders
 - **THEN** its padding and internal gap come from the compact card spacing values
 
-#### Scenario: Semantic card state renders
+#### Scenario: Excluded task card semantic state renders
 - **WHEN** a task card is marked as excluded
-- **THEN** the excluded state preserves its semantic visual treatment without changing the shared card spacing contract
+- **THEN** the excluded state preserves the shared card spacing contract
+- **AND** the task card may use a semantic red border without changing its padding or internal gap values
 
 ### Requirement: Gallery cards remain mobile-safe
 The system SHALL size gallery card columns so cards do not horizontally overflow narrow mobile viewports.
