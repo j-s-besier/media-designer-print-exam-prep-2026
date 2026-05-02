@@ -44,8 +44,7 @@ textarea {
 .topbar,
 .paper-header,
 .block-header,
-.task-title-row,
-.sticky-actions {
+.task-title-row {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -81,6 +80,22 @@ h3 {
 
 h4 {
   font-size: 16px;
+}
+
+.app-title {
+  display: grid;
+  gap: 2px;
+}
+
+.app-subtitle {
+  color: #415248;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.app-scope {
+  color: #627168;
+  font-size: 14px;
 }
 
 .eyebrow {
@@ -215,6 +230,12 @@ dd {
   color: #fff;
 }
 
+.icon-button {
+  aspect-ratio: 1;
+  min-width: 38px;
+  padding: 8px;
+}
+
 .secondary-button {
   background: #f7f4ed;
   border-color: #d6c7a9;
@@ -301,8 +322,40 @@ textarea:disabled {
   padding: 6px 10px;
 }
 
+.task-card {
+  overflow: hidden;
+  position: relative;
+}
+
 .task-card.excluded {
-  background: #f1f1ee;
+  background: #f3f0e8;
+  border-color: #c8b98f;
+  color: #5f625c;
+}
+
+.task-card.excluded::after {
+  border-top: 3px solid rgb(93 75 39 / 0.5);
+  content: "";
+  left: 16px;
+  pointer-events: none;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: rotate(-1.5deg);
+}
+
+.task-card.excluded .task-title-row h4 {
+  color: #4f452e;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.task-card.excluded .choice-list label,
+.task-card.excluded textarea,
+.task-card.excluded input[type="text"],
+.task-card.excluded .list-input input,
+.task-card.excluded .answer-table input {
+  background: #f6f3ea;
 }
 
 .subtask {
@@ -379,9 +432,13 @@ textarea {
 }
 
 .sticky-actions {
+  align-items: center;
   background: rgb(238 241 237 / 0.95);
   border-top: 1px solid var(--card-border);
   bottom: 0;
+  display: grid;
+  gap: var(--cluster-gap);
+  grid-template-columns: minmax(0, 1fr) auto auto;
   padding: 14px 0 0;
   position: sticky;
 }
@@ -393,10 +450,15 @@ textarea {
   border-radius: var(--control-radius);
   color: #5d4b27;
   display: flex;
-  flex: 1;
   gap: var(--inline-gap);
   min-height: 38px;
+  min-width: 0;
   padding: 8px 10px;
+}
+
+.sticky-validation span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .sticky-validation.ok {
@@ -439,10 +501,21 @@ textarea {
   .topbar,
   .paper-header,
   .block-header,
-  .task-title-row,
-  .sticky-actions {
+  .task-title-row {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .sticky-actions {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .sticky-validation {
+    grid-column: 1 / -1;
+  }
+
+  .sticky-actions .primary-button {
+    width: 100%;
   }
 
   .meta-grid {

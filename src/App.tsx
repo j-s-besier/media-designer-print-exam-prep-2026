@@ -14,7 +14,15 @@ import type {
   Result,
   UploadFile
 } from "./lib/examTypes";
-import { buildGradingPrompt, deriveGalleryCard, formatNumber, requiredExclusions, validatePaperSubmission } from "./lib/examLogic";
+import {
+  buildGradingPrompt,
+  deriveGalleryCard,
+  derivePaperExclusionProgress,
+  formatNumber,
+  formatStickyExclusionMessage,
+  requiredExclusions,
+  validatePaperSubmission
+} from "./lib/examLogic";
 import "./styles.css";
 
 type ExamSummary = {
@@ -116,9 +124,10 @@ function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <div>
-          <p className="eyebrow">Mediengestalter Digital und Print</p>
-          <h1>Pruefungstrainer Printmedien</h1>
+        <div className="app-title">
+          <h1>Pruefungstrainer</h1>
+          <p className="app-subtitle">Mediengestalter Digital und Print</p>
+          <p className="app-scope">Bereich: Printmedien</p>
         </div>
         {view.name === "result" ? (
           <button className="ghost-button" onClick={() => void returnToGallery()}>
@@ -245,6 +254,8 @@ function ExamRunner({
   const currentSubmission = submission;
   const readOnly = submission.status === "submitted";
   const selectionValidation = validatePaperSubmission(paper, currentSubmission);
+  const exclusionProgress = derivePaperExclusionProgress(paper, currentSubmission);
+  const stickyExclusionMessage = formatStickyExclusionMessage(exclusionProgress);
 
   function updateAttempt(next: Attempt) {
     setAttempt(next);
@@ -309,7 +320,7 @@ function ExamRunner({
         </div>
         <div className="paper-meta">
           <span>{paper.durationMinutes} min</span>
-          <span>{paper.weightPercent}% Gewicht</span>
+          <span>Gewichtung: {paper.weightPercent}%</span>
         </div>
       </div>
 
@@ -421,17 +432,22 @@ function ExamRunner({
         {!selectionValidation.valid ? (
           <div className="sticky-validation" role="status">
             <AlertCircle size={18} />
-            <span>{selectionValidation.messages.join(" ")}</span>
+            <span>{stickyExclusionMessage}</span>
           </div>
         ) : (
           <div className="sticky-validation ok" role="status">
             <Check size={18} />
-            <span>Streichregeln fuer diesen Pruefungsteil sind erfuellt.</span>
+            <span>{stickyExclusionMessage}</span>
           </div>
         )}
-        <button className="danger-button" disabled={readOnly} onClick={() => void quitAttempt()}>
+        <button
+          className="danger-button icon-button"
+          disabled={readOnly}
+          aria-label="Pruefung beenden"
+          title="Pruefung beenden"
+          onClick={() => void quitAttempt()}
+        >
           <LogOut size={18} />
-          Pruefung beenden
         </button>
         <button className="primary-button" disabled={readOnly || !selectionValidation.valid} onClick={() => void submitPaper()}>
           <Check size={18} />

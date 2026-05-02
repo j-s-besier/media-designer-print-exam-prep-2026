@@ -6,7 +6,10 @@ import {
   buildGradingPrompt,
   createEmptyAttempt,
   deriveGalleryCard,
+  derivePaperExclusionProgress,
+  formatExclusionProgress,
   formatNumber,
+  formatStickyExclusionMessage,
   requiredExclusions,
   scoreWeightedWritten,
   validatePaperSubmission
@@ -118,6 +121,39 @@ describe("selection and gallery logic", () => {
     }
 
     expect(validatePaperSubmission(pb2, submission).valid).toBe(true);
+  });
+
+  it("derives concise exclusion progress and sticky messages", async () => {
+    const exam = await loadExam(examId);
+    const pb4 = exam.papers.find((paper) => paper.id === "PB4")!;
+    const attempt = createEmptyAttempt(exam);
+    const submission = attempt.paperSubmissions.find((paper) => paper.paperId === "PB4")!;
+
+    const emptyProgress = derivePaperExclusionProgress(pb4, submission);
+    expect(emptyProgress).toMatchObject({
+      excluded: 0,
+      required: 4,
+      missing: 4,
+      over: 0,
+      valid: false
+    });
+    expect(formatExclusionProgress(emptyProgress)).toBe("Gebunden 0/3 | Ungebunden 0/1");
+    expect(formatStickyExclusionMessage(emptyProgress)).toBe("Noch 4 streichen: Gebunden 0/3 | Ungebunden 0/1");
+
+    for (const block of pb4.blocks) {
+      const selection = submission.blockSelections.find((item) => item.blockId === block.id)!;
+      selection.excludedTaskIds = block.tasks.slice(-requiredExclusions(block)).map((task) => task.id);
+    }
+
+    const completeProgress = derivePaperExclusionProgress(pb4, submission);
+    expect(completeProgress).toMatchObject({
+      excluded: 4,
+      required: 4,
+      missing: 0,
+      over: 0,
+      valid: true
+    });
+    expect(formatStickyExclusionMessage(completeProgress)).toBe("Gestrichen: Gebunden 3/3 | Ungebunden 1/1");
   });
 
   it("derives gallery card states from attempt and result", async () => {

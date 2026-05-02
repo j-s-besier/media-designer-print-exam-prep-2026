@@ -11,6 +11,24 @@ import type {
   Result
 } from "./examTypes";
 
+export type BlockExclusionProgress = {
+  blockId: string;
+  label: string;
+  excluded: number;
+  required: number;
+  missing: number;
+  over: number;
+};
+
+export type PaperExclusionProgress = {
+  blocks: BlockExclusionProgress[];
+  excluded: number;
+  required: number;
+  missing: number;
+  over: number;
+  valid: boolean;
+};
+
 export function sortPapers(papers: ExamPaper[]): ExamPaper[] {
   return [...papers].sort((a, b) => a.order - b.order);
 }
@@ -45,6 +63,79 @@ export function createEmptyAttempt(exam: Exam, now = new Date().toISOString()): 
 
 export function requiredExclusions(block: QuestionBlock): number {
   return Math.max(0, block.offeredCount - block.requiredCount);
+}
+
+export function derivePaperExclusionProgress(
+  paper: ExamPaper,
+  submission: PaperSubmission
+): PaperExclusionProgress {
+  const blocks = paper.blocks
+    .map((block) => {
+      const required = requiredExclusions(block);
+      const selection = submission.blockSelections.find((item) => item.blockId === block.id);
+      const excluded = selection?.excludedTaskIds.length ?? 0;
+      return {
+        blockId: block.id,
+        label: shortBlockLabel(block.title),
+        excluded,
+        required,
+        missing: Math.max(required - excluded, 0),
+        over: Math.max(excluded - required, 0)
+      };
+    })
+    .filter((block) => block.required > 0);
+  const required = blocks.reduce((sum, block) => sum + block.required, 0);
+  const excluded = blocks.reduce((sum, block) => sum + block.excluded, 0);
+  const missing = blocks.reduce((sum, block) => sum + block.missing, 0);
+  const over = blocks.reduce((sum, block) => sum + block.over, 0);
+
+  return {
+    blocks,
+    excluded,
+    required,
+    missing,
+    over,
+    valid: missing === 0 && over === 0
+  };
+}
+
+export function formatExclusionProgress(progress: PaperExclusionProgress): string {
+  if (progress.blocks.length === 0) {
+    return "Keine Streichung erforderlich";
+  }
+
+  return progress.blocks.map((block) => `${block.label} ${block.excluded}/${block.required}`).join(" | ");
+}
+
+export function formatStickyExclusionMessage(progress: PaperExclusionProgress): string {
+  const summary = formatExclusionProgress(progress);
+  if (progress.blocks.length === 0) {
+    return summary;
+  }
+  if (progress.valid) {
+    return `Gestrichen: ${summary}`;
+  }
+  if (progress.missing > 0 && progress.over === 0) {
+    return `Noch ${progress.missing} streichen: ${summary}`;
+  }
+  return `Streichungen pruefen: ${summary}`;
+}
+
+export function shortBlockLabel(title: string): string {
+  const lowerTitle = title.toLowerCase();
+  if (lowerTitle.includes("ungebundene")) {
+    return "Ungebunden";
+  }
+  if (lowerTitle.includes("gebundene")) {
+    return "Gebunden";
+  }
+  if (lowerTitle.includes("print")) {
+    return "Print";
+  }
+  if (lowerTitle.includes("allgemein")) {
+    return "Allgemein";
+  }
+  return title.replace(/aufgaben/gi, "").trim() || title;
 }
 
 export function validateBlockSelection(
