@@ -14,4 +14,4 @@ The system SHALL use a small set of named spacing values for card padding, compa
 #### Scenario: Excluded task card semantic state renders
 - **WHEN** a task card is marked as excluded
 - **THEN** the excluded state preserves the shared card spacing contract
-- **AND** the task card may use a semantic red border and card-level diagonal strike overlay without changing its padding or internal gap values
+- **AND** the task card may use a semantic red border without changing its padding or internal gap values
