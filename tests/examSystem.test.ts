@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
-import { describe, expect, it, afterAll } from "vitest";
+import { describe, expect, it, afterAll, afterEach } from "vitest";
 import type { Answer, Attempt, Exam, PaperId, PaperSubmission, Result, Solution } from "../src/lib/examTypes";
 import {
   buildGradingPrompt,
@@ -14,10 +15,11 @@ import {
   scoreWeightedWritten,
   validatePaperSubmission
 } from "../src/lib/examLogic";
-import { attemptDir, resultPath } from "../server/paths";
+import { attemptDir, configureRuntime, resetRuntimeConfig, resultPath, validationReportPath } from "../server/paths";
 import { examPackageDir, solutionDir } from "../server/paths";
 import { submitAttemptPaper } from "../server/attemptSubmission";
-import { gradeAttempt } from "../server/grading";
+import { GradingConfigurationError, gradeAttempt } from "../server/grading";
+import { startServer } from "../server/index";
 import { createAttempt, deleteInProgressAttempt, loadExam, loadManifest, saveAttempt, saveUpload } from "../server/storage";
 import { pathExists, readJson, writeJson } from "../server/jsonStore";
 import { validateExamPackage } from "../server/validation";
@@ -31,8 +33,14 @@ const gradedDeleteAttemptId = "attempt-test-delete-graded";
 const transientDeleteAttemptId = "attempt-test-delete-transient";
 const finalOnlyAttemptId = "attempt-test-final-only";
 const invalidExamId = "invalid-public-solution";
+const tempRoots: string[] = [];
+
+afterEach(() => {
+  resetRuntimeConfig();
+});
 
 afterAll(async () => {
+  resetRuntimeConfig();
   await fs.rm(attemptDir(testAttemptId), { recursive: true, force: true });
   await fs.rm(attemptDir(deleteAttemptId), { recursive: true, force: true });
   await fs.rm(attemptDir(submittedDeleteAttemptId), { recursive: true, force: true });
@@ -42,6 +50,7 @@ afterAll(async () => {
   await fs.rm(resultPath(testAttemptId), { force: true });
   await fs.rm(examPackageDir(invalidExamId), { recursive: true, force: true });
   await fs.rm(solutionDir(invalidExamId), { recursive: true, force: true });
+  await Promise.all(tempRoots.map((dir) => fs.rm(dir, { recursive: true, force: true })));
 });
 
 describe("exam package validation", () => {
@@ -331,6 +340,185 @@ describe("grading", () => {
     expect(weighted.fullExamWrittenContribution).toBe(40);
   });
 });
+
+describe("packaged runtime", () => {
+  it("reads public resources from resourceDir and writes validation reports to userDataDir", async () => {
+    const fixture = await createPackagedFixture();
+    configureRuntime({
+      runtimeMode: "packaged",
+      resourceDir: fixture.resourceDir,
+      userDataDir: fixture.userDataDir,
+      privateSolutionsDir: null,
+      frontendDistDir: null,
+      writeValidationReportsToResourceDir: false
+    });
+
+    const manifest = await loadManifest(examId);
+    expect(manifest.id).toBe(examId);
+
+    const report = await validateExamPackage(examId, true);
+    expect(report.valid).toBe(true);
+    expect(report.issues.map((issue) => issue.code)).toContain("private-solution-unconfigured");
+    expect(await pathExists(validationReportPath(examId))).toBe(true);
+  });
+
+  it("serves production frontend and API from one local origin", async () => {
+    const fixture = await createPackagedFixture({ frontend: true });
+    const server = await startServer({
+      runtimeMode: "packaged",
+      resourceDir: fixture.resourceDir,
+      userDataDir: fixture.userDataDir,
+      privateSolutionsDir: null,
+      frontendDistDir: fixture.frontendDistDir,
+      port: 0
+    });
+
+    try {
+      const [healthResponse, htmlResponse, assetResponse, examsResponse] = await Promise.all([
+        fetch(`${server.url}/api/health`),
+        fetch(server.url),
+        fetch(`${server.url}/assets/test.js`),
+        fetch(`${server.url}/api/exams`)
+      ]);
+
+      expect(healthResponse.ok).toBe(true);
+      await expect(healthResponse.json()).resolves.toEqual({ ok: true });
+      expect(htmlResponse.ok).toBe(true);
+      await expect(htmlResponse.text()).resolves.toContain("<div id=\"root\"></div>");
+      expect(assetResponse.ok).toBe(true);
+      await expect(assetResponse.text()).resolves.toBe("console.log('asset');");
+      expect(examsResponse.ok).toBe(true);
+      const exams = (await examsResponse.json()) as { exams: unknown[] };
+      expect(exams.exams.length).toBeGreaterThan(0);
+    } finally {
+      await server.close();
+    }
+  });
+
+  it("persists attempts, uploads, and trusted grading results under userDataDir", async () => {
+    const fixture = await createPackagedFixture({ privateSolutions: true });
+    configureRuntime({
+      runtimeMode: "packaged",
+      resourceDir: fixture.resourceDir,
+      userDataDir: fixture.userDataDir,
+      privateSolutionsDir: fixture.privateSolutionsDir,
+      frontendDistDir: null,
+      writeValidationReportsToResourceDir: false
+    });
+
+    const exam = await loadExam(examId);
+    const attempt = createSubmittedAttempt(exam);
+    await saveAttempt(attempt);
+    const upload = await saveUpload({
+      attemptId: attempt.id,
+      fieldId: "packaged-upload",
+      name: "skizze.txt",
+      mimeType: "text/plain",
+      dataBase64: Buffer.from("packaged upload", "utf8").toString("base64")
+    });
+    const result = await gradeAttempt(attempt);
+
+    expect(await pathExists(path.join(fixture.userDataDir, "attempts", attempt.id, "attempt.json"))).toBe(true);
+    expect(await pathExists(path.join(fixture.userDataDir, "attempts", attempt.id, upload.path))).toBe(true);
+    expect(await pathExists(path.join(fixture.userDataDir, "results", `${attempt.id}.result.json`))).toBe(true);
+    expect(result.examId).toBe(examId);
+    expect(await pathExists(path.join(fixture.resourceDir, "results", `${attempt.id}.result.json`))).toBe(false);
+  });
+
+  it("rejects packaged grading without trusted private solutions and does not write results", async () => {
+    const fixture = await createPackagedFixture();
+    configureRuntime({
+      runtimeMode: "packaged",
+      resourceDir: fixture.resourceDir,
+      userDataDir: fixture.userDataDir,
+      privateSolutionsDir: null,
+      frontendDistDir: null,
+      writeValidationReportsToResourceDir: false
+    });
+
+    const attempt = createSubmittedAttempt(await loadExam(examId));
+    await saveAttempt(attempt);
+
+    await expect(gradeAttempt(attempt)).rejects.toMatchObject({
+      code: "grading-unavailable",
+      statusCode: 503
+    } satisfies Partial<GradingConfigurationError>);
+    expect(await pathExists(resultPath(attempt.id))).toBe(false);
+  });
+
+  it("rejects packaged grading when the trusted directory lacks the matching solution", async () => {
+    const fixture = await createPackagedFixture();
+    const emptyPrivateSolutionsDir = path.join(fixture.tempRoot, "empty-private-solutions");
+    await fs.mkdir(emptyPrivateSolutionsDir, { recursive: true });
+    configureRuntime({
+      runtimeMode: "packaged",
+      resourceDir: fixture.resourceDir,
+      userDataDir: fixture.userDataDir,
+      privateSolutionsDir: emptyPrivateSolutionsDir,
+      frontendDistDir: null,
+      writeValidationReportsToResourceDir: false
+    });
+
+    const attempt = createSubmittedAttempt(await loadExam(examId));
+    await saveAttempt(attempt);
+
+    await expect(gradeAttempt(attempt)).rejects.toMatchObject({
+      code: "missing-solution",
+      statusCode: 404
+    } satisfies Partial<GradingConfigurationError>);
+    expect(await pathExists(resultPath(attempt.id))).toBe(false);
+  });
+
+  it("keeps private solutions out of student-facing packaged resources", async () => {
+    const fixture = await createPackagedFixture();
+    const leakedSolutions = await findFilesNamed(fixture.resourceDir, "solution.json");
+
+    expect(leakedSolutions).toEqual([]);
+  });
+});
+
+async function createPackagedFixture(options: { privateSolutions?: boolean; frontend?: boolean } = {}) {
+  const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), "mgdp-test-"));
+  tempRoots.push(tempRoot);
+  const resourceDir = path.join(tempRoot, "resources", "data");
+  const userDataDir = path.join(tempRoot, "user-data");
+  const frontendDistDir = options.frontend ? path.join(tempRoot, "dist") : null;
+  const privateSolutionsDir = options.privateSolutions ? path.join(tempRoot, "private-solutions") : null;
+
+  await fs.mkdir(resourceDir, { recursive: true });
+  await fs.cp(path.resolve("data", "exams"), path.join(resourceDir, "exams"), {
+    recursive: true,
+    filter: (source) => path.basename(source) !== "solution.json"
+  });
+  await fs.cp(path.resolve("data", "schemas"), path.join(resourceDir, "schemas"), { recursive: true });
+  await fs.cp(path.resolve("data", "templates"), path.join(resourceDir, "templates"), { recursive: true });
+
+  if (privateSolutionsDir) {
+    await fs.cp(path.resolve("data", "private", "solutions"), privateSolutionsDir, { recursive: true });
+  }
+
+  if (frontendDistDir) {
+    await fs.mkdir(path.join(frontendDistDir, "assets"), { recursive: true });
+    await fs.writeFile(path.join(frontendDistDir, "index.html"), "<!doctype html><div id=\"root\"></div>", "utf8");
+    await fs.writeFile(path.join(frontendDistDir, "assets", "test.js"), "console.log('asset');", "utf8");
+  }
+
+  return { tempRoot, resourceDir, userDataDir, frontendDistDir, privateSolutionsDir };
+}
+
+async function findFilesNamed(dirPath: string, fileName: string): Promise<string[]> {
+  const entries = await fs.readdir(dirPath, { withFileTypes: true });
+  const matches: string[] = [];
+  for (const entry of entries) {
+    const entryPath = path.join(dirPath, entry.name);
+    if (entry.isDirectory()) {
+      matches.push(...(await findFilesNamed(entryPath, fileName)));
+    } else if (entry.name === fileName) {
+      matches.push(entryPath);
+    }
+  }
+  return matches.sort();
+}
 
 function createSubmittedAttempt(exam: Exam): Attempt {
   const attempt = createEmptyAttempt(exam, "2026-05-01T10:00:00.000Z");

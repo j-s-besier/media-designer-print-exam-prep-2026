@@ -1,8 +1,8 @@
 import path from "node:path";
 import type { Answer, Attempt, Exam, PaperResult, Result, Rubric, Solution, SubtaskResult, TaskResult } from "../src/lib/examTypes";
 import { getExcludedTaskIds, round, scoreWeightedWritten, validateBlockSelection } from "../src/lib/examLogic";
-import { solutionDir } from "./paths";
-import { readJson } from "./jsonStore";
+import { privateSolutionsDir, solutionDir } from "./paths";
+import { pathExists, readJson } from "./jsonStore";
 import { loadExam, saveAttempt, saveResult } from "./storage";
 
 type ScoredSubtask = SubtaskResult & {
@@ -10,9 +10,20 @@ type ScoredSubtask = SubtaskResult & {
   preciseMaxPoints: number;
 };
 
+export class GradingConfigurationError extends Error {
+  constructor(
+    public readonly code: "grading-unavailable" | "missing-solution",
+    message: string,
+    public readonly statusCode: number
+  ) {
+    super(message);
+    this.name = "GradingConfigurationError";
+  }
+}
+
 export async function gradeAttempt(attempt: Attempt): Promise<Result> {
   const exam = await loadExam(attempt.examId);
-  const solution = await readJson<Solution>(path.join(solutionDir(attempt.examId), "solution.json"));
+  const solution = await loadPrivateSolution(attempt.examId);
   const rubricMap = new Map(solution.rubrics.map((rubric) => [rubric.subtaskId, rubric]));
   const validationNotes: string[] = [];
   let needsManualReview = false;
@@ -126,6 +137,27 @@ export async function gradeAttempt(attempt: Attempt): Promise<Result> {
   await saveAttempt(attempt);
   await saveResult(result);
   return result;
+}
+
+async function loadPrivateSolution(examId: string): Promise<Solution> {
+  if (!privateSolutionsDir) {
+    throw new GradingConfigurationError(
+      "grading-unavailable",
+      "Trusted private solution storage is not configured for this runtime.",
+      503
+    );
+  }
+
+  const solutionPath = path.join(solutionDir(examId), "solution.json");
+  if (!(await pathExists(solutionPath))) {
+    throw new GradingConfigurationError(
+      "missing-solution",
+      `No private solution is available for exam '${examId}'.`,
+      404
+    );
+  }
+
+  return readJson<Solution>(solutionPath);
 }
 
 function scoreSubtask(

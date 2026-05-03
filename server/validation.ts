@@ -2,7 +2,7 @@ import path from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import type { Attempt, Exam, ExamPaper, Manifest, QuestionBlock, Solution, Subtask } from "../src/lib/examTypes";
 import { requiredExclusions, sortPapers } from "../src/lib/examLogic";
-import { examPackageDir, schemasDir, solutionDir } from "./paths";
+import { examPackageDir, privateSolutionsDir, schemasDir, solutionDir, validationReportPath } from "./paths";
 import { pathExists, readJson, writeJson } from "./jsonStore";
 
 type ValidationIssue = {
@@ -41,7 +41,15 @@ export async function validateExamPackage(examId: string, writeReport = true): P
 
   await requireFile(manifestPath, "missing-manifest", issues);
   await requireFile(examPath, "missing-exam", issues);
-  await requireFile(solutionPath, "missing-private-solution", issues);
+  if (privateSolutionsDir) {
+    await requireFile(solutionPath, "missing-private-solution", issues);
+  } else {
+    issues.push({
+      severity: "warning",
+      code: "private-solution-unconfigured",
+      message: "Private solution storage is not configured for this runtime."
+    });
+  }
   if (await pathExists(publicSolutionPath)) {
     issues.push({
       severity: "error",
@@ -64,7 +72,7 @@ export async function validateExamPackage(examId: string, writeReport = true): P
       await validateSchema("exam.schema.json", exam, issues);
       scanForbiddenPublicKeys(exam, issues);
     }
-    if (await pathExists(solutionPath)) {
+    if (privateSolutionsDir && (await pathExists(solutionPath))) {
       solution = await readJson<Solution>(solutionPath);
       await validateSchema("solution.schema.json", solution, issues);
     }
@@ -111,7 +119,7 @@ export async function validateExamPackage(examId: string, writeReport = true): P
   const report = { examId, valid, requiresManualRightsReview, issues };
 
   if (writeReport && (await pathExists(publicDir))) {
-    await writeJson(path.join(publicDir, "validation-report.json"), report);
+    await writeJson(validationReportPath(examId), report);
   }
 
   return report;
