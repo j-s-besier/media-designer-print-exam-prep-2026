@@ -2,6 +2,7 @@
   "name": "mediengestalter-pruefung-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Jonas Besier",
   "type": "module",
   "main": "build/electron/main.js",
   "scripts": {
