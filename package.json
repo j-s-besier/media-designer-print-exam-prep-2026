@@ -15,7 +15,12 @@
     "build": "npm run typecheck && npm run build:web && npm run build:node",
     "serve": "node build/server/index.js",
     "package": "npm run build && electron-builder --dir",
-    "package:dist": "npm run build && electron-builder",
+    "package:mac:arm64": "npm run build && electron-builder --mac zip --arm64",
+    "package:mac:x64": "npm run build && electron-builder --mac zip --x64",
+    "package:mac": "npm run build && electron-builder --mac zip --arm64 --x64",
+    "package:win:x64": "npm run build && electron-builder --win zip --x64",
+    "package:release": "npm run build && electron-builder --mac zip --arm64 --x64 && electron-builder --win zip --x64",
+    "package:dist": "npm run package:release",
     "package:smoke": "npm run build && node build/scripts/packageSmoke.js",
     "test": "vitest run",
     "validate:exam": "tsx scripts/validateExamPackage.ts",
@@ -48,6 +53,29 @@
     "productName": "Pruefungstrainer Printmedien",
     "directories": {
       "output": "release"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Pruefungstrainer-Printmedien-${version}-mac-${arch}.${ext}"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Pruefungstrainer-Printmedien-${version}-windows-${arch}.${ext}"
     },
     "files": [
       "build/server/**/*",
