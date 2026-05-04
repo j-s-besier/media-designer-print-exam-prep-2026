@@ -1,18 +1,35 @@
 import path from "node:path";
 import type { Answer, Attempt, Exam, PaperResult, Result, Rubric, Solution, SubtaskResult, TaskResult } from "../src/lib/examTypes";
 import { getExcludedTaskIds, round, scoreWeightedWritten, validateBlockSelection } from "../src/lib/examLogic";
-import { solutionDir } from "./paths";
-import { readJson } from "./jsonStore";
+import { privateSolutionsDir, solutionDir } from "./paths";
+import { pathExists, readJson } from "./jsonStore";
 import { loadExam, saveAttempt, saveResult } from "./storage";
+
+type ScoredSubtask = SubtaskResult & {
+  precisePointsAwarded: number;
+  preciseMaxPoints: number;
+};
+
+export class GradingConfigurationError extends Error {
+  constructor(
+    public readonly code: "grading-unavailable" | "missing-solution",
+    message: string,
+    public readonly statusCode: number
+  ) {
+    super(message);
+    this.name = "GradingConfigurationError";
+  }
+}
 
 export async function gradeAttempt(attempt: Attempt): Promise<Result> {
   const exam = await loadExam(attempt.examId);
-  const solution = await readJson<Solution>(path.join(solutionDir(attempt.examId), "solution.json"));
+  const solution = await loadPrivateSolution(attempt.examId);
   const rubricMap = new Map(solution.rubrics.map((rubric) => [rubric.subtaskId, rubric]));
   const validationNotes: string[] = [];
   let needsManualReview = false;
 
   const papers: PaperResult[] = [];
+  const precisePaperScores: Array<{ pointsAwarded: number; pointsPossible: number; rawPercentage: number; weightPercent: number }> = [];
   for (const paper of exam.papers) {
     const submission = attempt.paperSubmissions.find((item) => item.paperId === paper.id);
     if (!submission) {
@@ -41,6 +58,8 @@ export async function gradeAttempt(attempt: Attempt): Promise<Result> {
 
     const excludedTaskIds = getExcludedTaskIds(submission);
     const taskResults: TaskResult[] = [];
+    let precisePaperAwarded = 0;
+    let precisePaperPossible = 0;
     for (const block of paper.blocks) {
       for (const task of block.tasks) {
         if (excludedTaskIds.has(task.id)) {
@@ -53,39 +72,50 @@ export async function gradeAttempt(attempt: Attempt): Promise<Result> {
           });
           continue;
         }
-        const subtaskResults: SubtaskResult[] = task.subtasks.map((subtask) =>
+        const scoredSubtasks = task.subtasks.map((subtask) =>
           scoreSubtask(subtask.id, subtask.maxPoints, submission.answers, rubricMap.get(subtask.id))
         );
-        if (subtaskResults.some((result) => result.needsManualReview)) {
+        if (scoredSubtasks.some((result) => result.needsManualReview)) {
           needsManualReview = true;
         }
+        const preciseTaskAwarded = scoredSubtasks.reduce((sum, result) => sum + result.precisePointsAwarded, 0);
+        const preciseTaskPossible = scoredSubtasks.reduce((sum, result) => sum + result.preciseMaxPoints, 0);
+        precisePaperAwarded += preciseTaskAwarded;
+        precisePaperPossible += preciseTaskPossible;
         taskResults.push({
           taskId: task.id,
           status: "graded",
-          pointsAwarded: round(subtaskResults.reduce((sum, result) => sum + result.pointsAwarded, 0)),
-          pointsPossible: round(subtaskResults.reduce((sum, result) => sum + result.maxPoints, 0)),
-          subtasks: subtaskResults
+          pointsAwarded: round(preciseTaskAwarded),
+          pointsPossible: round(preciseTaskPossible),
+          subtasks: scoredSubtasks.map(toSubtaskResult)
         });
       }
     }
 
-    const pointsAwarded = round(taskResults.reduce((sum, task) => sum + task.pointsAwarded, 0));
-    const pointsPossible = round(taskResults.reduce((sum, task) => sum + task.pointsPossible, 0));
-    const rawPercentage = pointsPossible === 0 ? 0 : round((pointsAwarded / pointsPossible) * 100);
+    const pointsAwarded = round(precisePaperAwarded);
+    const pointsPossible = round(precisePaperPossible);
+    const preciseRawPercentage = precisePaperPossible === 0 ? 0 : (precisePaperAwarded / precisePaperPossible) * 100;
+    const rawPercentage = round(preciseRawPercentage);
+    precisePaperScores.push({
+      pointsAwarded: precisePaperAwarded,
+      pointsPossible: precisePaperPossible,
+      rawPercentage: preciseRawPercentage,
+      weightPercent: paper.weightPercent
+    });
     papers.push({
       paperId: paper.id,
       pointsAwarded,
       pointsPossible,
       rawPercentage,
       weightPercent: paper.weightPercent,
-      weightedContribution: round((rawPercentage * paper.weightPercent) / 100),
+      weightedContribution: round((preciseRawPercentage * paper.weightPercent) / 100),
       tasks: taskResults
     });
   }
 
-  const rawWrittenPointsAwarded = round(papers.reduce((sum, paper) => sum + paper.pointsAwarded, 0));
-  const rawWrittenPointsPossible = round(papers.reduce((sum, paper) => sum + paper.pointsPossible, 0));
-  const weighted = scoreWeightedWritten(papers);
+  const rawWrittenPointsAwarded = round(precisePaperScores.reduce((sum, paper) => sum + paper.pointsAwarded, 0));
+  const rawWrittenPointsPossible = round(precisePaperScores.reduce((sum, paper) => sum + paper.pointsPossible, 0));
+  const weighted = scoreWeightedWritten(precisePaperScores);
   const result: Result = {
     schemaVersion: "1.0",
     id: `result-${attempt.id}`,
@@ -109,21 +139,44 @@ export async function gradeAttempt(attempt: Attempt): Promise<Result> {
   return result;
 }
 
+async function loadPrivateSolution(examId: string): Promise<Solution> {
+  if (!privateSolutionsDir) {
+    throw new GradingConfigurationError(
+      "grading-unavailable",
+      "Trusted private solution storage is not configured for this runtime.",
+      503
+    );
+  }
+
+  const solutionPath = path.join(solutionDir(examId), "solution.json");
+  if (!(await pathExists(solutionPath))) {
+    throw new GradingConfigurationError(
+      "missing-solution",
+      `No private solution is available for exam '${examId}'.`,
+      404
+    );
+  }
+
+  return readJson<Solution>(solutionPath);
+}
+
 function scoreSubtask(
   subtaskId: string,
   maxPoints: number,
   answers: Answer[],
   rubric: Rubric | undefined
-): SubtaskResult {
+): ScoredSubtask {
   const answerText = normalizeAnswerText(answers.filter((answer) => answer.fieldId.startsWith(`${subtaskId}-`)));
   if (!rubric) {
     return {
       subtaskId,
       pointsAwarded: 0,
-      maxPoints,
+      maxPoints: round(maxPoints),
       feedback: "Keine Rubric fuer diese Teilaufgabe gefunden.",
       confidence: 0.2,
-      needsManualReview: true
+      needsManualReview: true,
+      precisePointsAwarded: 0,
+      preciseMaxPoints: maxPoints
     };
   }
 
@@ -131,10 +184,12 @@ function scoreSubtask(
     return {
       subtaskId,
       pointsAwarded: 0,
-      maxPoints,
+      maxPoints: round(maxPoints),
       feedback: "Keine Antwort eingereicht.",
       confidence: 0.95,
-      needsManualReview: false
+      needsManualReview: false,
+      precisePointsAwarded: 0,
+      preciseMaxPoints: maxPoints
     };
   }
 
@@ -150,19 +205,26 @@ function scoreSubtask(
     }
   }
 
-  const capped = Math.min(maxPoints, round(awarded));
+  const capped = Math.min(maxPoints, awarded);
   const confidence = missingManualCriteria.length > 0 ? 0.62 : 0.78;
   return {
     subtaskId,
-    pointsAwarded: capped,
-    maxPoints,
+    pointsAwarded: round(capped),
+    maxPoints: round(maxPoints),
     feedback:
       missingManualCriteria.length > 0
         ? `Automatisch bewertet; Kriterium ${missingManualCriteria.join(", ")} sollte manuell geprueft werden.`
         : "Automatisch anhand der hinterlegten Rubric bewertet.",
     confidence,
-    needsManualReview: missingManualCriteria.length > 0
+    needsManualReview: missingManualCriteria.length > 0,
+    precisePointsAwarded: capped,
+    preciseMaxPoints: maxPoints
   };
+}
+
+function toSubtaskResult(scored: ScoredSubtask): SubtaskResult {
+  const { precisePointsAwarded: _precisePointsAwarded, preciseMaxPoints: _preciseMaxPoints, ...result } = scored;
+  return result;
 }
 
 function normalizeAnswerText(answers: Answer[]): string {

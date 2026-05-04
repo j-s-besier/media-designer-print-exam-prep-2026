@@ -10,21 +10,37 @@ Use this skill to create a new original written exam package for the app.
 ## Workflow
 
 1. Read `openspec/research/research.md` and `openspec/research/themen_printmedien_ap_sommer_2026.md`.
-2. Create a public package under `data/exams/<exam-id>/`:
+2. Choose the next numbered exam identity:
+   - Package ID: lowercase `mgdp-<n>` such as `mgdp-1`
+   - Display label: matching `MgDp-<n>` such as `MgDp-1`
+   - Use the next highest unused number from existing `data/exams/mgdp-*` packages.
+   - Do not create season-, date-, topic-, or practice-name-based exam IDs or titles.
+3. Create a public package under `data/exams/<exam-id>/`:
    - `manifest.json`
    - `exam.json`
    - optional `assets/`
    - `validation-report.json`
-3. Create the private solution under `data/private/solutions/<exam-id>/solution.json`.
-4. Keep `solution.json` out of public exam directories and out of client app code.
-5. Validate the package:
+4. Create the private solution under `data/private/solutions/<exam-id>/solution.json`.
+5. Keep `solution.json` out of public exam directories and out of client app code.
+6. Validate the package:
    ```bash
    npm run validate:exam -- <exam-id>
    ```
-6. If generating the default sample package, run:
+7. If generating the default sample package, run:
    ```bash
    npx tsx scripts/seedSampleExam.ts
    ```
+
+## Naming Rules
+
+- Store the package identity as lowercase `mgdp-<n>` everywhere an ID is required:
+  - public package directory
+  - private solution directory
+  - `manifest.id`
+  - `exam.id`
+  - `solution.examId`
+- Use the matching display label `MgDp-<n>` for `manifest.title` and `exam.title`.
+- Do not invent separate descriptive exam names. Keep season/topic context in summaries, sources, prompts, or provenance only when useful.
 
 ## Required Structure
 
@@ -65,4 +81,5 @@ Every generated task must include provenance:
 - `exam.json` contains only renderable public content.
 - `solution.json` contains rubrics, model-answer guidance, criteria, keywords, and manual-review hints.
 - Do not place solution/rubric/model answer fields in `exam.json`.
+- Learner-facing point labels must be rounded to one decimal place. Keep precise internal numeric values where exact scoring totals depend on them.
 - Run validation before finishing.

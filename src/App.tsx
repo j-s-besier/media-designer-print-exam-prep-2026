@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { AlertCircle, Check, ClipboardCheck, Copy, FilePenLine, Loader2, Upload } from "lucide-react";
+import { AlertCircle, Check, ClipboardCheck, Copy, FilePenLine, Loader2, LogOut, Upload } from "lucide-react";
 import { createRoot } from "react-dom/client";
 import type {
   Answer,
@@ -14,7 +14,15 @@ import type {
   Result,
   UploadFile
 } from "./lib/examTypes";
-import { buildGradingPrompt, deriveGalleryCard, requiredExclusions, validatePaperSubmission } from "./lib/examLogic";
+import {
+  buildGradingPrompt,
+  deriveGalleryCard,
+  derivePaperExclusionProgress,
+  formatNumber,
+  formatStickyExclusionMessage,
+  requiredExclusions,
+  validatePaperSubmission
+} from "./lib/examLogic";
 import "./styles.css";
 
 type ExamSummary = {
@@ -85,10 +93,7 @@ function App() {
 
       const response = await fetch(`/api/exams/${card.examId}`);
       const data = (await response.json()) as ExamPayload;
-      const attempt =
-        card.action === "Pruefen" || !data.latestAttempt
-          ? await createAttempt(card.examId)
-          : data.latestAttempt;
+      const attempt = await createAttempt(card.examId);
       setView({ name: "exam", exam: data.exam, manifest: data.manifest, attempt });
     } catch (error) {
       showNotice(error instanceof Error ? error.message : "Aktion fehlgeschlagen.", "error");
@@ -119,11 +124,12 @@ function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
-        <div>
-          <p className="eyebrow">Mediengestalter Digital und Print</p>
-          <h1>Pruefungstrainer Printmedien</h1>
+        <div className="app-title">
+          <h1>Pruefungstrainer</h1>
+          <p className="app-subtitle">Mediengestalter Digital und Print</p>
+          <p className="app-scope">Bereich: Printmedien</p>
         </div>
-        {view.name !== "gallery" ? (
+        {view.name === "result" ? (
           <button className="ghost-button" onClick={() => void returnToGallery()}>
             Zurueck
           </button>
@@ -157,6 +163,7 @@ function App() {
           onFinished={() =>
             void returnToGallery("Pruefung abgegeben. Der Auswertungsprompt kann jetzt in der Galerie kopiert werden.")
           }
+          onQuit={() => void returnToGallery("Pruefungsversuch geloescht.")}
           onError={(message) => showNotice(message, "error")}
         />
       ) : null}
@@ -179,7 +186,7 @@ function Gallery({
       {cards.map((card) => {
         const copied = card.action === "Prompt kopieren" && card.attemptId === copiedAttemptId;
         return (
-          <article className="exam-card" key={card.examId}>
+          <article className="surface surface-standard surface-stack exam-card" key={card.examId}>
             <div className="card-heading">
               <ClipboardCheck size={22} />
               <div>
@@ -190,15 +197,17 @@ function Gallery({
             <dl className="meta-grid">
               <div>
                 <dt>Status</dt>
-                <dd>{statusLabel(card.status)}</dd>
+                <dd>
+                  <span className={`status-badge ${statusClassName(card.status)}`}>{statusLabel(card.status)}</span>
+                </dd>
               </div>
               <div>
                 <dt>Bewertung</dt>
-                <dd>{card.weightedWrittenPercentage === null ? "offen" : `${card.weightedWrittenPercentage}%`}</dd>
+                <dd>{card.weightedWrittenPercentage === null ? "-" : `${formatNumber(card.weightedWrittenPercentage)}%`}</dd>
               </div>
               <div>
                 <dt>Punkte</dt>
-                <dd>{card.pointsLabel ?? "-/-"}</dd>
+                <dd>{card.pointsLabel ?? "-"}</dd>
               </div>
             </dl>
             <button className="primary-button" onClick={() => void onOpen(card)}>
@@ -218,6 +227,7 @@ function ExamRunner({
   attempt,
   setAttempt,
   onFinished,
+  onQuit,
   onError
 }: {
   exam: Exam;
@@ -225,11 +235,11 @@ function ExamRunner({
   attempt: Attempt;
   setAttempt: (attempt: Attempt) => void;
   onFinished: () => void;
+  onQuit: () => void;
   onError: (message: string) => void;
 }) {
   const paper = exam.papers.find((item) => item.id === attempt.currentPaperId) ?? exam.papers[0];
   const submission = attempt.paperSubmissions.find((item) => item.paperId === paper.id);
-  const [saving, setSaving] = useState(false);
   const [messages, setMessages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -244,6 +254,8 @@ function ExamRunner({
   const currentSubmission = submission;
   const readOnly = submission.status === "submitted";
   const selectionValidation = validatePaperSubmission(paper, currentSubmission);
+  const exclusionProgress = derivePaperExclusionProgress(paper, currentSubmission);
+  const stickyExclusionMessage = formatStickyExclusionMessage(exclusionProgress);
 
   function updateAttempt(next: Attempt) {
     setAttempt(next);
@@ -255,23 +267,6 @@ function ExamRunner({
     updateAttempt(draft);
   }
 
-  async function save(nextAttempt = attempt) {
-    setSaving(true);
-    try {
-      const response = await fetch(`/api/attempts/${nextAttempt.id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ attempt: nextAttempt })
-      });
-      if (!response.ok) {
-        const data = (await response.json()) as { error?: string };
-        throw new Error(data.error ?? "Speichern fehlgeschlagen.");
-      }
-    } finally {
-      setSaving(false);
-    }
-  }
-
   async function submitPaper() {
     setMessages([]);
     const validation = validatePaperSubmission(paper, currentSubmission);
@@ -279,9 +274,10 @@ function ExamRunner({
       setMessages(validation.messages);
       return;
     }
-    await save(attempt);
     const response = await fetch(`/api/attempts/${attempt.id}/papers/${paper.id}/submit`, {
-      method: "POST"
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ attempt })
     });
     const data = (await response.json()) as { attempt?: Attempt; nextPaperId?: PaperId | null; error?: string; messages?: string[] };
     if (!response.ok || !data.attempt) {
@@ -294,9 +290,28 @@ function ExamRunner({
     }
   }
 
+  async function quitAttempt() {
+    const confirmed = window.confirm(
+      "Pruefung wirklich beenden? Der aktuelle Versuch wird geloescht. Deine Antworten koennen nicht fortgesetzt werden."
+    );
+    if (!confirmed) {
+      return;
+    }
+
+    setMessages([]);
+    const response = await fetch(`/api/attempts/${attempt.id}`, { method: "DELETE" });
+    if (!response.ok) {
+      const data = (await response.json().catch(() => ({}))) as { error?: string };
+      onError(data.error ?? "Pruefungsversuch konnte nicht geloescht werden.");
+      return;
+    }
+
+    onQuit();
+  }
+
   return (
     <section className="exam-runner">
-      <div className="paper-header">
+      <div className="surface surface-standard surface-inline paper-header">
         <div>
           <p className="eyebrow">{manifest.title}</p>
           <h2>
@@ -305,12 +320,11 @@ function ExamRunner({
         </div>
         <div className="paper-meta">
           <span>{paper.durationMinutes} min</span>
-          <span>{paper.weightPercent}% Gewicht</span>
-          {saving ? <span>Speichert...</span> : null}
+          <span>Gewichtung: {paper.weightPercent}%</span>
         </div>
       </div>
 
-      <div className="instruction-band">
+      <div className="surface surface-standard surface-stack-compact instruction-band">
         {paper.instructions.map((block, index) => (
           <Content key={index} block={block} />
         ))}
@@ -329,7 +343,7 @@ function ExamRunner({
         const excludedIds = selection?.excludedTaskIds ?? [];
         const required = requiredExclusions(block);
         return (
-          <section className="task-block" key={block.id}>
+          <section className="surface surface-standard surface-stack-compact task-block" key={block.id}>
             <div className="block-header">
               <div>
                 <h3>{block.title}</h3>
@@ -344,13 +358,13 @@ function ExamRunner({
             {block.tasks.map((task) => {
               const excluded = excludedIds.includes(task.id);
               return (
-                <article className={`task-card ${excluded ? "excluded" : ""}`} key={task.id}>
+                <article className={`surface surface-compact surface-stack-compact task-card ${excluded ? "excluded" : ""}`} key={task.id}>
                   <div className="task-title-row">
                     <div>
                       <h4>
                         {task.number} {task.title}
                       </h4>
-                      <p>{task.maxPoints} Punkte</p>
+                      <p>{formatNumber(task.maxPoints)} Punkte</p>
                     </div>
                     {required > 0 ? (
                       <button
@@ -380,7 +394,7 @@ function ExamRunner({
                   {task.subtasks.map((subtask) => (
                     <div className="subtask" key={subtask.id}>
                       <strong>
-                        {subtask.label}) {subtask.maxPoints} P
+                        {subtask.label}) {formatNumber(subtask.maxPoints)} P
                       </strong>
                       {subtask.prompt.map((blockItem, index) => (
                         <Content key={index} block={blockItem} />
@@ -418,16 +432,22 @@ function ExamRunner({
         {!selectionValidation.valid ? (
           <div className="sticky-validation" role="status">
             <AlertCircle size={18} />
-            <span>{selectionValidation.messages.join(" ")}</span>
+            <span>{stickyExclusionMessage}</span>
           </div>
         ) : (
           <div className="sticky-validation ok" role="status">
             <Check size={18} />
-            <span>Streichregeln fuer diesen Pruefungsteil sind erfuellt.</span>
+            <span>{stickyExclusionMessage}</span>
           </div>
         )}
-        <button className="ghost-button" onClick={() => void save()}>
-          Speichern
+        <button
+          className="danger-button icon-button"
+          disabled={readOnly}
+          aria-label="Pruefung beenden"
+          title="Pruefung beenden"
+          onClick={() => void quitAttempt()}
+        >
+          <LogOut size={18} />
         </button>
         <button className="primary-button" disabled={readOnly || !selectionValidation.valid} onClick={() => void submitPaper()}>
           <Check size={18} />
@@ -616,20 +636,20 @@ function Content({ block }: { block: ContentBlock }) {
 function ResultView({ result }: { result: Result }) {
   return (
     <section className="result-view">
-      <div className="result-summary">
+      <div className="surface surface-standard surface-stack-compact result-summary">
         <h2>Auswertung</h2>
         <p>{result.examId}</p>
-        <strong>{result.weightedWrittenPercentage}%</strong>
+        <strong>{formatNumber(result.weightedWrittenPercentage)}%</strong>
         <span>
-          {result.rawWrittenPointsAwarded}/{result.rawWrittenPointsPossible} Rohpunkte
+          {formatNumber(result.rawWrittenPointsAwarded)}/{formatNumber(result.rawWrittenPointsPossible)} Rohpunkte
         </span>
       </div>
       <div className="paper-results">
         {result.papers.map((paper) => (
-          <article className="paper-result" key={paper.paperId}>
+          <article className="surface surface-compact surface-stack-compact paper-result" key={paper.paperId}>
             <h3>{paper.paperId}</h3>
             <p>
-              {paper.pointsAwarded}/{paper.pointsPossible} Punkte, {paper.rawPercentage}%
+              {formatNumber(paper.pointsAwarded)}/{formatNumber(paper.pointsPossible)} Punkte, {formatNumber(paper.rawPercentage)}%
             </p>
           </article>
         ))}
@@ -678,13 +698,15 @@ async function copyTextToClipboard(text: string): Promise<void> {
 
 function statusLabel(status: GalleryCardModel["status"]) {
   const labels: Record<GalleryCardModel["status"], string> = {
-    "not-started": "nicht gestartet",
-    "in-progress": "in Bearbeitung",
-    submitted: "abgegeben",
-    "grading-ready": "bereit zur Auswertung",
-    graded: "bewertet"
+    todo: "ToDo",
+    failed: "Nicht bestanden",
+    passed: "Bestanden"
   };
   return labels[status];
+}
+
+function statusClassName(status: GalleryCardModel["status"]) {
+  return `status-${status}`;
 }
 
 createRoot(document.getElementById("root")!).render(<App />);

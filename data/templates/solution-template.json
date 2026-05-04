@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "examId": "mediengestalter-printmedien-<season>",
+  "examId": "mgdp-<number>",
   "visibility": "private",
   "gradingMode": "criteria-keyword-assisted",
   "rubrics": []

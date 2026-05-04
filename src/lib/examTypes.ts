@@ -236,18 +236,13 @@ export type SubtaskResult = {
   needsManualReview: boolean;
 };
 
-export type GalleryStatus =
-  | "not-started"
-  | "in-progress"
-  | "submitted"
-  | "grading-ready"
-  | "graded";
+export type GalleryStatus = "todo" | "failed" | "passed";
 
 export type GalleryCardModel = {
   examId: string;
   title: string;
   status: GalleryStatus;
-  action: "Pruefen" | "Fortsetzen" | "Prompt kopieren" | "Ergebnis anzeigen";
+  action: "Pruefen" | "Prompt kopieren" | "Ergebnis anzeigen";
   weightedWrittenPercentage: number | null;
   pointsLabel: string | null;
   attemptId: string | null;

@@ -1,0 +1,3336 @@
+{
+  "schemaVersion": "1.0",
+  "id": "mgdp-1",
+  "title": "MgDp-1",
+  "profession": "mediengestalter-digital-print",
+  "specialization": "printmedien",
+  "ordinance": "2023-05-15",
+  "examDate": "2026-05-06",
+  "language": "de-DE",
+  "sources": [
+    {
+      "label": "ZFA Pruefungsthemen Sommer 2026",
+      "url": "https://zfamedien.de/pruefungen/mediengestalter-digital-und-print-2023/pruefungsthemen-ap/"
+    }
+  ],
+  "papers": [
+    {
+      "id": "PB4",
+      "title": "Wirtschafts- und Sozialkunde",
+      "durationMinutes": 60,
+      "weightPercent": 10,
+      "order": 1,
+      "maxPoints": 100,
+      "schedule": {
+        "startsAt": "08:00",
+        "endsAt": "09:00"
+      },
+      "allowedAids": [
+        "eventuell mitgelieferte Gesetzesauszuege"
+      ],
+      "instructions": [
+        {
+          "type": "paragraph",
+          "text": "Bearbeiten Sie 15 der gebundenen Aufgaben und 5 der offenen Aufgaben."
+        }
+      ],
+      "blocks": [
+        {
+          "id": "PB4-bound",
+          "title": "Gebundene Aufgaben",
+          "scope": "wiso-bound",
+          "offeredCount": 18,
+          "requiredCount": 15,
+          "defaultDropPolicy": "last-if-unclear",
+          "tasks": [
+            {
+              "id": "PB4-W1",
+              "number": "W1",
+              "title": "Ausbildungsvertrag",
+              "topicTags": [
+                "wiso",
+                "ausbildungsvertrag"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Ausbildungsvertrag im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W1-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W1-a-answer",
+                      "type": "multipleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ],
+                      "minSelect": 1,
+                      "maxSelect": 2
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W2",
+              "number": "W2",
+              "title": "Sozialversicherung",
+              "topicTags": [
+                "wiso",
+                "sozialversicherung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Sozialversicherung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W2-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W2-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W3",
+              "number": "W3",
+              "title": "Tarifvertrag",
+              "topicTags": [
+                "wiso",
+                "tarifvertrag"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Tarifvertrag im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W3-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W3-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W4",
+              "number": "W4",
+              "title": "Arbeitsschutz",
+              "topicTags": [
+                "wiso",
+                "arbeitsschutz"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Arbeitsschutz im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W4-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W4-a-answer",
+                      "type": "multipleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ],
+                      "minSelect": 1,
+                      "maxSelect": 2
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W5",
+              "number": "W5",
+              "title": "Mitbestimmung",
+              "topicTags": [
+                "wiso",
+                "mitbestimmung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Mitbestimmung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W5-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W5-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W6",
+              "number": "W6",
+              "title": "Markt und Preisbildung",
+              "topicTags": [
+                "wiso",
+                "markt-und-preisbildung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Markt und Preisbildung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W6-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W6-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W7",
+              "number": "W7",
+              "title": "Ausbildungsvertrag",
+              "topicTags": [
+                "wiso",
+                "ausbildungsvertrag"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Ausbildungsvertrag im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W7-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W7-a-answer",
+                      "type": "multipleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ],
+                      "minSelect": 1,
+                      "maxSelect": 2
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W8",
+              "number": "W8",
+              "title": "Sozialversicherung",
+              "topicTags": [
+                "wiso",
+                "sozialversicherung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Sozialversicherung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W8-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W8-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W9",
+              "number": "W9",
+              "title": "Tarifvertrag",
+              "topicTags": [
+                "wiso",
+                "tarifvertrag"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Tarifvertrag im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W9-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W9-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W10",
+              "number": "W10",
+              "title": "Arbeitsschutz",
+              "topicTags": [
+                "wiso",
+                "arbeitsschutz"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Arbeitsschutz im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W10-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W10-a-answer",
+                      "type": "multipleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ],
+                      "minSelect": 1,
+                      "maxSelect": 2
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W11",
+              "number": "W11",
+              "title": "Mitbestimmung",
+              "topicTags": [
+                "wiso",
+                "mitbestimmung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Mitbestimmung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W11-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W11-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W12",
+              "number": "W12",
+              "title": "Markt und Preisbildung",
+              "topicTags": [
+                "wiso",
+                "markt-und-preisbildung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Markt und Preisbildung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W12-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W12-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W13",
+              "number": "W13",
+              "title": "Ausbildungsvertrag",
+              "topicTags": [
+                "wiso",
+                "ausbildungsvertrag"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Ausbildungsvertrag im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W13-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W13-a-answer",
+                      "type": "multipleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ],
+                      "minSelect": 1,
+                      "maxSelect": 2
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W14",
+              "number": "W14",
+              "title": "Sozialversicherung",
+              "topicTags": [
+                "wiso",
+                "sozialversicherung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Sozialversicherung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W14-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W14-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W15",
+              "number": "W15",
+              "title": "Tarifvertrag",
+              "topicTags": [
+                "wiso",
+                "tarifvertrag"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Tarifvertrag im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W15-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W15-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W16",
+              "number": "W16",
+              "title": "Arbeitsschutz",
+              "topicTags": [
+                "wiso",
+                "arbeitsschutz"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Arbeitsschutz im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W16-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W16-a-answer",
+                      "type": "multipleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ],
+                      "minSelect": 1,
+                      "maxSelect": 2
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W17",
+              "number": "W17",
+              "title": "Mitbestimmung",
+              "topicTags": [
+                "wiso",
+                "mitbestimmung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Mitbestimmung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W17-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W17-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W18",
+              "number": "W18",
+              "title": "Markt und Preisbildung",
+              "topicTags": [
+                "wiso",
+                "markt-und-preisbildung"
+              ],
+              "maxPoints": 2.6666666666666665,
+              "estimatedMinutes": 2,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Situation: Markt und Preisbildung im Ausbildungsbetrieb."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Waehlen Sie die fachlich passende Antwort fuer die beschriebene betriebliche Situation aus."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W18-a",
+                  "label": "a",
+                  "operator": "auswaehlen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Waehlen Sie die zutreffende Aussage aus."
+                    }
+                  ],
+                  "maxPoints": 2.6666666666666665,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W18-a-answer",
+                      "type": "singleChoice",
+                      "options": [
+                        {
+                          "id": "a",
+                          "label": "Die Entscheidung richtet sich nach betrieblichen und rechtlichen Vorgaben."
+                        },
+                        {
+                          "id": "b",
+                          "label": "Der Betrieb kann gesetzliche Schutzvorschriften beliebig aussetzen."
+                        },
+                        {
+                          "id": "c",
+                          "label": "Die Regelung gilt nur, wenn sie nicht schriftlich dokumentiert wurde."
+                        },
+                        {
+                          "id": "d",
+                          "label": "Private Absprachen ersetzen grundsaetzlich gesetzliche Pflichten."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "PB4-open",
+          "title": "Ungebundene Aufgaben",
+          "scope": "wiso-open",
+          "offeredCount": 6,
+          "requiredCount": 5,
+          "defaultDropPolicy": "last-if-unclear",
+          "tasks": [
+            {
+              "id": "PB4-W19",
+              "number": "W19",
+              "title": "Rechte und Pflichten",
+              "topicTags": [
+                "wiso",
+                "rechte-und-pflichten"
+              ],
+              "maxPoints": 12,
+              "estimatedMinutes": 8,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Auszubildende fragt nach einer Einschaetzung zum Thema Rechte und Pflichten."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beschreiben Sie die wesentlichen Punkte der Situation und leiten Sie eine begruendete Handlungsempfehlung ab."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W19-a",
+                  "label": "a",
+                  "operator": "erlaeutern",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Erlauetern Sie Ihre Antwort mit Bezug zur betrieblichen Praxis."
+                    }
+                  ],
+                  "maxPoints": 12,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W19-a-answer",
+                      "type": "longText",
+                      "minLines": 5,
+                      "maxLines": 12
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W20",
+              "number": "W20",
+              "title": "Kuendigungsschutz",
+              "topicTags": [
+                "wiso",
+                "kuendigungsschutz"
+              ],
+              "maxPoints": 12,
+              "estimatedMinutes": 8,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Auszubildende fragt nach einer Einschaetzung zum Thema Kuendigungsschutz."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beschreiben Sie die wesentlichen Punkte der Situation und leiten Sie eine begruendete Handlungsempfehlung ab."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W20-a",
+                  "label": "a",
+                  "operator": "erlaeutern",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Erlauetern Sie Ihre Antwort mit Bezug zur betrieblichen Praxis."
+                    }
+                  ],
+                  "maxPoints": 12,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W20-a-answer",
+                      "type": "longText",
+                      "minLines": 5,
+                      "maxLines": 12
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W21",
+              "number": "W21",
+              "title": "Wirtschaftskreislauf",
+              "topicTags": [
+                "wiso",
+                "wirtschaftskreislauf"
+              ],
+              "maxPoints": 12,
+              "estimatedMinutes": 8,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Auszubildende fragt nach einer Einschaetzung zum Thema Wirtschaftskreislauf."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beschreiben Sie die wesentlichen Punkte der Situation und leiten Sie eine begruendete Handlungsempfehlung ab."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W21-a",
+                  "label": "a",
+                  "operator": "erlaeutern",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Erlauetern Sie Ihre Antwort mit Bezug zur betrieblichen Praxis."
+                    }
+                  ],
+                  "maxPoints": 12,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W21-a-answer",
+                      "type": "longText",
+                      "minLines": 5,
+                      "maxLines": 12
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W22",
+              "number": "W22",
+              "title": "Nachhaltigkeit",
+              "topicTags": [
+                "wiso",
+                "nachhaltigkeit"
+              ],
+              "maxPoints": 12,
+              "estimatedMinutes": 8,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Auszubildende fragt nach einer Einschaetzung zum Thema Nachhaltigkeit."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beschreiben Sie die wesentlichen Punkte der Situation und leiten Sie eine begruendete Handlungsempfehlung ab."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W22-a",
+                  "label": "a",
+                  "operator": "erlaeutern",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Erlauetern Sie Ihre Antwort mit Bezug zur betrieblichen Praxis."
+                    }
+                  ],
+                  "maxPoints": 12,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W22-a-answer",
+                      "type": "longText",
+                      "minLines": 5,
+                      "maxLines": 12
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W23",
+              "number": "W23",
+              "title": "Steuern und Abgaben",
+              "topicTags": [
+                "wiso",
+                "steuern-und-abgaben"
+              ],
+              "maxPoints": 12,
+              "estimatedMinutes": 8,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Auszubildende fragt nach einer Einschaetzung zum Thema Steuern und Abgaben."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beschreiben Sie die wesentlichen Punkte der Situation und leiten Sie eine begruendete Handlungsempfehlung ab."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W23-a",
+                  "label": "a",
+                  "operator": "erlaeutern",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Erlauetern Sie Ihre Antwort mit Bezug zur betrieblichen Praxis."
+                    }
+                  ],
+                  "maxPoints": 12,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W23-a-answer",
+                      "type": "longText",
+                      "minLines": 5,
+                      "maxLines": 12
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB4-W24",
+              "number": "W24",
+              "title": "Betriebliche Organisation",
+              "topicTags": [
+                "wiso",
+                "betriebliche-organisation"
+              ],
+              "maxPoints": 12,
+              "estimatedMinutes": 8,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Auszubildende fragt nach einer Einschaetzung zum Thema Betriebliche Organisation."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Beschreiben Sie die wesentlichen Punkte der Situation und leiten Sie eine begruendete Handlungsempfehlung ab."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB4-W24-a",
+                  "label": "a",
+                  "operator": "erlaeutern",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Erlauetern Sie Ihre Antwort mit Bezug zur betrieblichen Praxis."
+                    }
+                  ],
+                  "maxPoints": 12,
+                  "answerFields": [
+                    {
+                      "id": "PB4-W24-a-answer",
+                      "type": "longText",
+                      "minLines": 5,
+                      "maxLines": 12
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PB2",
+      "title": "Medien konzipieren, gestalten und praesentieren",
+      "durationMinutes": 120,
+      "weightPercent": 20,
+      "order": 2,
+      "maxPoints": 100,
+      "schedule": {
+        "startsAt": "09:15",
+        "endsAt": "11:15"
+      },
+      "allowedAids": [
+        "nicht programmierter, netzunabhaengiger Taschenrechner",
+        "Rechtschreib-Nachschlagewerk",
+        "Woerterbuch Englisch-Deutsch / Deutsch-Englisch"
+      ],
+      "instructions": [
+        {
+          "type": "paragraph",
+          "text": "Bearbeiten Sie 7 Aufgaben aus U1 bis U8 und 3 Aufgaben aus U9 bis U12. Streichen Sie je Block genau eine Aufgabe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beurteilen Sie die Situation aus gestalterischer und konzeptioneller Sicht."
+        }
+      ],
+      "blocks": [
+        {
+          "id": "PB2-general",
+          "title": "Fachrichtungsuebergreifende Aufgaben",
+          "scope": "general",
+          "questionRange": "U1-U8",
+          "offeredCount": 8,
+          "requiredCount": 7,
+          "defaultDropPolicy": "last-if-unclear",
+          "tasks": [
+            {
+              "id": "PB2-U1",
+              "number": "U1",
+              "title": "Corporate Design Beratung",
+              "topicTags": [
+                "corporate-design",
+                "beratung"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine regionale Druckerei moechte ihr Erscheinungsbild vereinheitlichen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U1-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U1-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U1-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U1-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U2",
+              "number": "U2",
+              "title": "Zielgruppenanalyse",
+              "topicTags": [
+                "zielgruppe",
+                "analyse"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Kulturverein plant eine Informationskampagne fuer junge Erwachsene."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U2-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U2-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U2-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U2-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U3",
+              "number": "U3",
+              "title": "Logo-Entwurf",
+              "topicTags": [
+                "logo",
+                "marke"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Start-up bittet um eine fachliche Einschaetzung zu einem neuen Logo."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U3-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U3-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U3-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U3-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U4",
+              "number": "U4",
+              "title": "Webseiten-Gestaltung",
+              "topicTags": [
+                "web",
+                "gestaltung"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Landingpage wirkt unruhig und soll besser fuehren."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U4-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U4-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U4-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U4-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U5",
+              "number": "U5",
+              "title": "Flyer-Gestaltung",
+              "topicTags": [
+                "flyer",
+                "layout"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein zweiseitiger Veranstaltungsflyer soll lesbarer werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U5-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U5-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U5-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U5-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U6",
+              "number": "U6",
+              "title": "Schutzrechte",
+              "topicTags": [
+                "recht",
+                "schutzrechte"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Kunde liefert Bild- und Schriftdaten fuer eine Kampagne."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U6-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U6-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U6-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U6-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U7",
+              "number": "U7",
+              "title": "Korrekturen durchfuehren",
+              "topicTags": [
+                "korrektur",
+                "abstimmung"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Korrekturlauf enthaelt widerspruechliche Kundenanmerkungen."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U7-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U7-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U7-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U7-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U8",
+              "number": "U8",
+              "title": "Protokolle",
+              "topicTags": [
+                "protokoll",
+                "kommunikation"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Nach einer Entwurfsbesprechung soll ein Ergebnisprotokoll erstellt werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U8-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U8-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U8-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U8-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "PB2-printmedien",
+          "title": "Fachrichtungsspezifische Aufgaben Printmedien",
+          "scope": "specialization",
+          "questionRange": "U9-U12",
+          "offeredCount": 4,
+          "requiredCount": 3,
+          "defaultDropPolicy": "last-if-unclear",
+          "tasks": [
+            {
+              "id": "PB2-U9",
+              "number": "U9",
+              "title": "Gestaltungsraster",
+              "topicTags": [
+                "printmedien",
+                "gestaltungsraster"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Magazin-Doppelseite benoetigt ein belastbares Gestaltungsraster."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U9-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U9-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U9-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U9-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    },
+                    {
+                      "id": "PB2-U9-b-upload",
+                      "type": "drawingUpload",
+                      "acceptedMimeTypes": [
+                        "image/png",
+                        "image/jpeg",
+                        "application/pdf"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U10",
+              "number": "U10",
+              "title": "Gestaltungsgrundsaetze anwenden",
+              "topicTags": [
+                "printmedien",
+                "gestaltungsgrundsaetze"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Anzeige hat viele gleich starke Elemente und kaum Lesefuehrung."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U10-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U10-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U10-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U10-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U11",
+              "number": "U11",
+              "title": "Visuelle Zeichen",
+              "topicTags": [
+                "printmedien",
+                "zeichen"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Fuer ein Leitsystem sollen Piktogramme und Wortmarken kombiniert werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U11-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U11-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U11-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U11-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB2-U12",
+              "number": "U12",
+              "title": "Gestaltung beurteilen",
+              "topicTags": [
+                "printmedien",
+                "beurteilung"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Plakatentwurf soll fachlich beurteilt und verbessert werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB2-U12-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U12-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB2-U12-b",
+                  "label": "b",
+                  "operator": "beurteilen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beurteilen Sie die Situation und formulieren Sie zwei begruendete Verbesserungen. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB2-U12-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PB3",
+      "title": "Medien produzieren",
+      "durationMinutes": 120,
+      "weightPercent": 20,
+      "order": 3,
+      "maxPoints": 100,
+      "schedule": {
+        "startsAt": "11:45",
+        "endsAt": "13:45"
+      },
+      "allowedAids": [
+        "nicht programmierter, netzunabhaengiger Taschenrechner",
+        "Rechtschreib-Nachschlagewerk",
+        "Woerterbuch Englisch-Deutsch / Deutsch-Englisch"
+      ],
+      "instructions": [
+        {
+          "type": "paragraph",
+          "text": "Bearbeiten Sie 7 Aufgaben aus U1 bis U8 und 3 Aufgaben aus U9 bis U12. Streichen Sie je Block genau eine Aufgabe."
+        },
+        {
+          "type": "paragraph",
+          "text": "Analysieren Sie die Produktionssituation und beschreiben Sie geeignete technische Massnahmen."
+        }
+      ],
+      "blocks": [
+        {
+          "id": "PB3-general",
+          "title": "Fachrichtungsuebergreifende Aufgaben",
+          "scope": "general",
+          "questionRange": "U1-U8",
+          "offeredCount": 8,
+          "requiredCount": 7,
+          "defaultDropPolicy": "last-if-unclear",
+          "tasks": [
+            {
+              "id": "PB3-U1",
+              "number": "U1",
+              "title": "Feedback",
+              "topicTags": [
+                "feedback",
+                "workflow"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Produktionsteam gibt Rueckmeldung zu fehlerhaften Layoutdaten."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U1-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U1-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U1-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U1-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U2",
+              "number": "U2",
+              "title": "HTML/CSS-Syntax",
+              "topicTags": [
+                "html",
+                "css"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein einfacher HTML/CSS-Ausschnitt fuer eine Produktseite enthaelt Fehler."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U2-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U2-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U2-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U2-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U3",
+              "number": "U3",
+              "title": "Druckverfahren",
+              "topicTags": [
+                "druckverfahren"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Kunde muss zwischen mehreren Druckverfahren entscheiden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U3-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U3-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U3-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U3-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U4",
+              "number": "U4",
+              "title": "KI",
+              "topicTags": [
+                "ki",
+                "produktion"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Bildmotiv wurde mit KI erstellt und soll in einer Kampagne genutzt werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U4-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U4-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U4-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U4-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U5",
+              "number": "U5",
+              "title": "Bildbeurteilung",
+              "topicTags": [
+                "bilddaten",
+                "qualitaet"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Mehrere Bilddaten sollen fuer Ausgabequalitaet beurteilt werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U5-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U5-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U5-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U5-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U6",
+              "number": "U6",
+              "title": "Medienneutrale Daten",
+              "topicTags": [
+                "daten",
+                "medienneutral"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Produktdaten sollen fuer Print und Web aus einer Quelle genutzt werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U6-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U6-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U6-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U6-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U7",
+              "number": "U7",
+              "title": "Englischsprachige Informationsquellen",
+              "topicTags": [
+                "englisch",
+                "dokumentation"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein technisches Datenblatt liegt nur auf Englisch vor."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U7-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U7-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U7-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U7-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U8",
+              "number": "U8",
+              "title": "Arbeitsdokumentation",
+              "topicTags": [
+                "dokumentation",
+                "workflow"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Produktionsablauf soll nachvollziehbar dokumentiert werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U8-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U8-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U8-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U8-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            }
+          ]
+        },
+        {
+          "id": "PB3-printmedien",
+          "title": "Fachrichtungsspezifische Aufgaben Printmedien",
+          "scope": "specialization",
+          "questionRange": "U9-U12",
+          "offeredCount": 4,
+          "requiredCount": 3,
+          "defaultDropPolicy": "last-if-unclear",
+          "tasks": [
+            {
+              "id": "PB3-U9",
+              "number": "U9",
+              "title": "Produktionsdaten aufbereiten",
+              "topicTags": [
+                "printmedien",
+                "produktionsdaten"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Eine Druckerei meldet Probleme in einer gelieferten PDF-Datei."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U9-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U9-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U9-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U9-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    },
+                    {
+                      "id": "PB3-U9-b-upload",
+                      "type": "fileUpload",
+                      "acceptedMimeTypes": [
+                        "image/png",
+                        "image/jpeg",
+                        "application/pdf"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U10",
+              "number": "U10",
+              "title": "Druckbogen-Berechnung",
+              "topicTags": [
+                "printmedien",
+                "druckbogen"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Ein Falzprodukt soll mit Nutzen und Bogenzahl geplant werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U10-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U10-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U10-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U10-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U11",
+              "number": "U11",
+              "title": "Farbmanagement",
+              "topicTags": [
+                "printmedien",
+                "farbmanagement"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Daten aus RGB-Quellen sollen fuer den Offsetdruck vorbereitet werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U11-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U11-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U11-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U11-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            },
+            {
+              "id": "PB3-U12",
+              "number": "U12",
+              "title": "Automatisierung",
+              "topicTags": [
+                "printmedien",
+                "automatisierung"
+              ],
+              "maxPoints": 10,
+              "estimatedMinutes": 12,
+              "prompt": [
+                {
+                  "type": "paragraph",
+                  "text": "Wiederkehrende Preflight-Schritte sollen automatisiert werden."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Bearbeiten Sie die Teilaufgaben vollstaendig und begruenden Sie fachliche Entscheidungen nachvollziehbar."
+                }
+              ],
+              "subtasks": [
+                {
+                  "id": "PB3-U12-a",
+                  "label": "a",
+                  "operator": "nennen",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Nennen Sie vier relevante fachliche Kriterien oder Pruefpunkte. (4 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 4,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U12-a-answer",
+                      "type": "shortTextList",
+                      "items": 4
+                    }
+                  ]
+                },
+                {
+                  "id": "PB3-U12-b",
+                  "label": "b",
+                  "operator": "beschreiben",
+                  "prompt": [
+                    {
+                      "type": "paragraph",
+                      "text": "Beschreiben Sie geeignete technische Massnahmen und begruenden Sie diese. (6 Punkte)"
+                    }
+                  ],
+                  "maxPoints": 6,
+                  "answerFields": [
+                    {
+                      "id": "PB3-U12-b-answer",
+                      "type": "longText",
+                      "minLines": 4,
+                      "maxLines": 10
+                    }
+                  ]
+                }
+              ],
+              "provenance": {
+                "sourceType": "original-generated",
+                "basis": "Generated from public ZFA/IHK-like structure, public topic list, and local research notes; not copied from protected original exam material.",
+                "notDerivedFromProtectedExam": true,
+                "rightsStatus": "generated",
+                "requiresManualRightsReview": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

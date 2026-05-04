@@ -5,6 +5,16 @@ import { createEmptyAttempt } from "../src/lib/examLogic";
 import { attemptDir, attemptsDir, examPackageDir, examsDir, resultPath, resultsDir } from "./paths";
 import { listDirectories, listFiles, pathExists, readJson, writeJson } from "./jsonStore";
 
+export class AttemptDeletionError extends Error {
+  constructor(
+    message: string,
+    public readonly statusCode: number
+  ) {
+    super(message);
+    this.name = "AttemptDeletionError";
+  }
+}
+
 export async function listExamIds(): Promise<string[]> {
   return listDirectories(examsDir);
 }
@@ -19,9 +29,7 @@ export async function loadExam(examId: string): Promise<Exam> {
 
 export async function createAttempt(examId: string): Promise<Attempt> {
   const exam = await loadExam(examId);
-  const attempt = createEmptyAttempt(exam);
-  await saveAttempt(attempt);
-  return attempt;
+  return createEmptyAttempt(exam);
 }
 
 export async function saveAttempt(attempt: Attempt): Promise<void> {
@@ -30,6 +38,22 @@ export async function saveAttempt(attempt: Attempt): Promise<void> {
 
 export async function loadAttempt(attemptId: string): Promise<Attempt> {
   return readJson<Attempt>(path.join(attemptDir(attemptId), "attempt.json"));
+}
+
+export async function deleteInProgressAttempt(attemptId: string): Promise<void> {
+  const targetDir = safeAttemptDir(attemptId);
+  const filePath = path.join(targetDir, "attempt.json");
+  if (!(await pathExists(filePath))) {
+    await fs.rm(targetDir, { recursive: true, force: true });
+    return;
+  }
+
+  const attempt = await readJson<Attempt>(filePath);
+  if (attempt.status !== "in-progress") {
+    throw new AttemptDeletionError("Nur laufende Pruefungsversuche koennen geloescht werden.", 409);
+  }
+
+  await fs.rm(targetDir, { recursive: true, force: true });
 }
 
 export async function listAttempts(): Promise<Attempt[]> {
@@ -96,4 +120,11 @@ export async function saveUpload(args: {
     mimeType: args.mimeType,
     size: buffer.length
   };
+}
+
+function safeAttemptDir(attemptId: string): string {
+  if (!/^[a-zA-Z0-9._-]+$/.test(attemptId) || attemptId === "." || attemptId === "..") {
+    throw new AttemptDeletionError("Ungueltige Versuch-ID.", 400);
+  }
+  return attemptDir(attemptId);
 }

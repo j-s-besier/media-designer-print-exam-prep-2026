@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "id": "mgdp-2",
+  "title": "MgDp-2",
+  "type": "written-exam",
+  "profession": "mediengestalter-digital-print",
+  "specialization": "printmedien",
+  "status": "available",
+  "examVersion": "1.0.0",
+  "createdAt": "2026-05-01T16:10:00.000Z",
+  "examDate": "2026-05-06",
+  "summary": "Original generierte, pruefungsnahe schriftliche Uebungspruefung fuer PB4, PB2 und PB3 mit Printmedien-Schwerpunkt.",
+  "contentPolicy": {
+    "sourceType": "original-generated",
+    "copyrightSafe": true,
+    "notDerivedFromProtectedExam": true,
+    "requiresManualRightsReview": false,
+    "notes": "Alle Aufgaben, Szenarien und Rubrics wurden neu erstellt und orientieren sich nur an oeffentlicher Struktur, Themenliste, Operatoren und Punkteformat."
+  }
+}

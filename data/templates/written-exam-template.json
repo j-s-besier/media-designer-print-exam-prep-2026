@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "id": "mediengestalter-printmedien-<season>",
-  "title": "Abschlusspruefung Uebung <season> - Printmedien",
+  "id": "mgdp-<number>",
+  "title": "MgDp-<number>",
   "profession": "mediengestalter-digital-print",
   "specialization": "printmedien",
   "ordinance": "2023-05-15",

@@ -99,12 +99,22 @@ The private `solution.json` file SHALL store model answers, rubrics, alternative
 - **AND** every rubric entry defines a maximum point value that does not exceed the referenced subtask maximum
 
 ### Requirement: Attempt data is separate from exam packages
-The system SHALL store per-user or per-run answers, excluded tasks, uploads, progress, and submission timestamps in attempt data separate from `exam.json`.
+The system SHALL store completed per-run answers, excluded tasks, uploads, progress, and submission timestamps in attempt data separate from `exam.json`, while in-progress work remains transient until full completion.
 
 #### Scenario: Student enters an answer
-- **WHEN** a student saves text for an answer field
-- **THEN** the value is stored in an attempt record keyed by the answer field ID
+- **WHEN** a student types text for an answer field during an in-progress attempt
+- **THEN** the value is stored in the active attempt session keyed by the answer field ID
 - **AND** `exam.json` remains unchanged
+- **AND** the system does not write or update a durable attempt record only because the value changed
+
+#### Scenario: Student completes the written exam
+- **WHEN** the student submits the final configured paper
+- **THEN** the system writes a durable attempt record containing the completed per-run answers, excluded tasks, uploads, progress, and submission timestamps
+- **AND** the attempt data remains separate from `exam.json`
+
+#### Scenario: Student leaves before completion
+- **WHEN** the browser closes or crashes before the final configured paper is submitted
+- **THEN** no durable attempt record is written for the in-progress answers
 
 ### Requirement: Result data is derived from grading
 The system SHALL store grading output in result data separate from exam, solution, and attempt data.
@@ -113,4 +123,27 @@ The system SHALL store grading output in result data separate from exam, solutio
 - **WHEN** grading completes for a submitted attempt
 - **THEN** the system writes a result containing paper totals, task totals, subtask scores, feedback, confidence, raw percentages, and weighted written percentage
 - **AND** the attempt answers remain unchanged
+
+### Requirement: Generated exam packages use numbered identity
+The exam creation workflow SHALL assign newly generated Mediengestalter Printmedien exam packages a lowercase sequential package ID in the form `mgdp-<number>` and a display label in the form `MgDp-<number>`.
+
+#### Scenario: New exam package is created
+- **WHEN** the creation workflow creates a new exam package
+- **THEN** the public package directory uses the lowercase `mgdp-<number>` ID
+- **AND** `manifest.id`, `exam.id`, and private `solution.examId` use that same lowercase ID
+- **AND** `manifest.title` and `exam.title` use the matching `MgDp-<number>` display label
+
+#### Scenario: Next numbered exam is selected
+- **WHEN** existing generated packages include numbered IDs
+- **THEN** the creation workflow chooses the next highest unused `mgdp-<number>` ID
+- **AND** it does not create season-, date-, or practice-name-based package IDs for new generated exams
+
+### Requirement: Exam packages preserve scoring precision
+The exam package model SHALL allow precise numeric point values needed for correct scoring, while learner-facing displays apply rounded presentation formatting.
+
+#### Scenario: Fractional PB4 point value is required
+- **WHEN** a PB4 task needs a fractional maximum point value to maintain the configured paper total
+- **THEN** `exam.json` may store the precise numeric value
+- **AND** validation continues to use the precise value for scoring consistency
+- **AND** learner-facing screens display the value rounded to one decimal place
 
